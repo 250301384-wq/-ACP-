@@ -1,0 +1,493 @@
+:root {
+  color-scheme: light;
+  --app-bg: #f4f6f8;
+  --panel-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #667085;
+  --border-color: #e5e7eb;
+  --brand-blue: #1677ff;
+  --success: #2f9e44;
+  --danger: #d92d20;
+  --warning: #f59f00;
+  --purple: #7048e8;
+  --header-height: 72px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --app-bg: #14171a;
+  --panel-bg: #1f2429;
+  --text-main: #f2f4f7;
+  --text-muted: #a4adb8;
+  --border-color: #30363d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--app-bg);
+  color: var(--text-main);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--app-bg);
+}
+
+.app-sider {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+  border-right: 1px solid var(--border-color);
+}
+
+.brand-button {
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.brand-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--brand-blue);
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.brand-button strong,
+.brand-button small {
+  display: block;
+  line-height: 1.2;
+}
+
+.brand-button small {
+  margin-top: 3px;
+  color: var(--text-muted);
+}
+
+.nav-menu {
+  border-inline-end: 0 !important;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: var(--header-height);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: color-mix(in srgb, var(--panel-bg) 94%, transparent);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+
+.header-title {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.header-title h4 {
+  margin: 0 !important;
+  line-height: 1.25 !important;
+}
+
+.header-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.app-content {
+  padding: 20px;
+  background: var(--app-bg);
+}
+
+.page-stack {
+  width: min(1280px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-alert,
+.loading-panel {
+  width: min(960px, 100%);
+  margin: 0 auto 16px;
+}
+
+.loading-panel {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.dashboard-hero {
+  min-height: 180px;
+  padding: 28px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background:
+    linear-gradient(90deg, rgba(22, 119, 255, 0.12), rgba(47, 158, 68, 0.08)),
+    var(--panel-bg);
+}
+
+.dashboard-hero h2 {
+  margin-top: 0 !important;
+}
+
+.dashboard-hero p {
+  max-width: 720px;
+  color: var(--text-muted);
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(150px, 1fr));
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-row .ant-segmented {
+  min-width: 250px;
+}
+
+.browse-card .ant-card-head-title,
+.question-panel .ant-card-head-title {
+  min-width: 0;
+}
+
+.pagination-row {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 24px;
+}
+
+.tip-tag {
+  width: 100%;
+  margin-inline-end: 0;
+  white-space: normal;
+  line-height: 1.55;
+  padding: 6px 8px;
+}
+
+.question-panel {
+  overflow: hidden;
+}
+
+.question-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.question-stem {
+  font-size: 17px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.option-list {
+  display: grid;
+  gap: 12px;
+}
+
+.option-card {
+  width: 100%;
+  min-height: 58px;
+  padding: 12px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 24px;
+  gap: 10px;
+  align-items: start;
+  color: var(--text-main);
+  background: var(--panel-bg);
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.option-card:hover {
+  border-color: var(--brand-blue);
+  box-shadow: 0 6px 18px rgba(22, 119, 255, 0.12);
+}
+
+.option-card:disabled {
+  cursor: default;
+}
+
+.option-key {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  color: #fff;
+  background: #64748b;
+  font-weight: 700;
+}
+
+.option-text {
+  line-height: 1.65;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.option-state {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.option-state.correct {
+  color: var(--success);
+}
+
+.option-state.wrong {
+  color: var(--danger);
+}
+
+.option-card.is-selected {
+  border-color: var(--brand-blue);
+  background: rgba(22, 119, 255, 0.08);
+}
+
+.option-card.is-correct {
+  border-color: var(--success);
+  background: rgba(47, 158, 68, 0.1);
+}
+
+.option-card.is-wrong {
+  border-color: var(--danger);
+  background: rgba(217, 45, 32, 0.1);
+}
+
+.option-card.is-correct .option-key {
+  background: var(--success);
+}
+
+.option-card.is-wrong .option-key {
+  background: var(--danger);
+}
+
+.answer-block {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.explanation-collapse {
+  margin-top: 12px;
+}
+
+.explanation-collapse p {
+  white-space: pre-wrap;
+  line-height: 1.75;
+}
+
+.question-footer {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.empty-question {
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.practice-page {
+  padding-bottom: 88px;
+}
+
+.fixed-action-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 30;
+  width: min(920px, calc(100vw - 32px));
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: color-mix(in srgb, var(--panel-bg) 96%, transparent);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.14);
+  transform: translateX(-50%);
+  backdrop-filter: blur(12px);
+}
+
+.wrong-footer,
+.settings-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.wrong-controls {
+  display: grid;
+  grid-template-columns: 220px minmax(260px, 1fr);
+  gap: 12px;
+}
+
+.exam-config {
+  display: flex;
+  gap: 18px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.exam-config > div {
+  display: grid;
+  gap: 8px;
+}
+
+.exam-status {
+  display: grid;
+  grid-template-columns: 170px 170px minmax(180px, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.exam-progress {
+  min-width: 180px;
+}
+
+.chart {
+  height: 300px !important;
+}
+
+.large-chart {
+  height: 360px !important;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-row:last-child {
+  border-bottom: 0;
+}
+
+.settings-row p {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 960px) {
+  .app-header {
+    min-height: auto;
+    padding: 10px 14px;
+  }
+
+  .app-content {
+    padding: 14px;
+  }
+
+  .dashboard-hero,
+  .exam-status {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .dashboard-hero {
+    display: grid;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter-row .ant-segmented,
+  .filter-row .ant-input-affix-wrapper,
+  .filter-row .ant-input-search {
+    grid-column: 1 / -1;
+  }
+
+  .wrong-controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-sider {
+    position: fixed;
+    z-index: 40;
+  }
+
+  .app-header {
+    margin-left: 80px;
+  }
+
+  .header-title h4 {
+    font-size: 16px !important;
+  }
+
+  .header-tags {
+    display: none;
+  }
+
+  .filter-row {
+    grid-template-columns: 1fr;
+  }
+
+  .option-card {
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .option-state {
+    grid-column: 2;
+  }
+
+  .fixed-action-bar .ant-btn {
+    flex: 1 1 92px;
+  }
+}
