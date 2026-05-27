@@ -1,0 +1,1070 @@
+[
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 84,
+    "reason": "缺少官方解析",
+    "preview": "84.Tunnel服务的公网endpoint是？ A.http://tunnel.odps.aliyun.com/api B.http://service.odps.aliyun.com/tunnel C.http://tunnel.odps.aliyun.com D.http://dt.odps.aliyun.com 答案:D AI解析:Tunnel服务是阿里云MaxCompute的数据传输通道，用于大规模数据导入导出。公网访问时需使用特定endpoint。阿里云文档中明确"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 105,
+    "reason": "选项少于 2 个；缺少 AI 解析",
+    "preview": "105.以下哪个是ODPS内网的end_point （ ） A.http://service.odps.aliyun.com/api B. 答案:B 解析:阿里云内网地址：ODPS地址：http://odps-ext.aliyun-inc.com/api 公网地址: ODPS地址：http://service.odps.aliyun.com/api"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 167,
+    "reason": "缺少官方解析",
+    "preview": "167.大数据计算服务(MaxCompute, 原DPS)中的日志表log 是一 张分区表，分区表是dt,每天产生一个分区用于存储当天新增的数据，数据是通过tunnel 接口上传，运维人员需要在每天上传数据之前生成好当天的分区，假设当前日期是20160301,语句_可以创建合适的分区。（ ） A.add partition log (dt=' 20160301') B.insert overwrite table log partition(dt=' 20160301') C"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 252,
+    "reason": "缺少官方解析",
+    "preview": "252.Bob使用java开发了一个大数据计算服务的MapReduce，用来对海量交易数据做时序分析，结果该MR性能较差，某些map存在明显的长尾效应，__________ 方法可以有效的消除长尾效应。 A.只关心处理的列，忽略其余的多余列 B.合理使用combiner, 适当的减少数据交互量 C.通过set命令或者Jobconf修改MR参数，增大map/reduce的内存 D.通过set命令或者Jobconf修改MR参数，影响分片的大小和个数 答案:B AI解析:长尾效应在"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 281,
+    "reason": "缺少官方解析",
+    "preview": "281.开发ODPS的用户自定义标量函数，主要是实现其中的哪个方法 （ ） A.evaluate B.main C.iterate D.process 答案:A AI解析:ODPS用户自定义标量函数的核心实现方法是`evaluate`。MaxCompute官方文档中明确说明，自定义标量函数需通过实现`evaluate`方法定义函数逻辑，该方法负责接收输入参数并返回计算结果。选项B的`main`是Java程序入口方法，与UDF无关；选项C的`iterate`通常用于聚合函数的中"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 317,
+    "reason": "缺少官方解析",
+    "preview": "317.ODPS中，允许的SQL的最大长度为。 A.8M B.2M C.1M D.512k 答案:B AI解析:ODPS对SQL语句长度有限制以确保系统处理效率，根据平台规范，单个SQL文本最大允许2M。该限制涉及语法解析与任务调度的性能优化，超过此长度需考虑拆分语句或使用其他编程接口处理，正确选项对应平台明确定义的阈值。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 318,
+    "reason": "缺少官方解析",
+    "preview": "318.关于ODPS policy授权，说法不正确的是？ A.支持根据ip授权 B.支持表名通配符授权 C.支持授权的时间段 D.支持根据数据敏感级授权 答案:D AI解析:ODPS（MaxCompute）的policy授权机制提供了多种访问控制条件。官方文档指出，访问策略支持基于IP地址限制（A）、使用通配符匹配表名（B）及设置时间条件（C）。数据敏感级别通常由数据分类管理功能处理，不在policy授权的直接支持范围内。D选项中提到的数据敏感级授权并非policy授权的功能"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 320,
+    "reason": "缺少官方解析",
+    "preview": "320.以下哪个不属于ODPS计算层的模块？ A.Nuwa B.OTS C.Pangu D.Fuxi 答案:B AI解析:ODPS计算层核心模块包括协调服务Nuwa、分布式文件系统Pangu和资源调度Fuxi，三者协同实现分布式计算框架；OTS为表格存储服务，属于数据存储层功能模块，与计算层架构分离。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 323,
+    "reason": "缺少官方解析",
+    "preview": "323.ODPS tunnel上传或者下载数据时，参数rd的默认取值是？ A.\\t B.\\r\\n C.' D.\" 答案:B AI解析:ODPS Tunnel中的rd参数用于定义数据上传下载时的行分隔符。阿里云MaxCompute官方文档指出，该参数默认值为\\r\\n。选项B对应Windows系统换行符，而其他选项如\\t（制表符）、'（单引号）、\"（双引号）均不用于行分隔场景。文档示例中未明确提及默认值变化，维持初始设定。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 325,
+    "reason": "缺少官方解析",
+    "preview": "325.大数据计算服务(MaxCompute，原ODPS）的开发人员需要创建一张用户消费习惯表，其中一个字段想要命名为like，则以下说法正确的是 A.可以将字段命名为like，无需特殊处理 B.可以将字段名命名为like，在创建表及引用该字段时，需要用括起来，即表示为'like' C.在创建表时无需特殊处理，但是在引用该字段时需要表示为'like'(注:没有测试成功) D.无法将字段命名为like，因为这是关键字 答案:D AI解析:MaxCompute字段命名需避免使用S"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 329,
+    "reason": "缺少官方解析",
+    "preview": "329.关于ODPS分区的说法，正确的是？ A.ODPS将分区列的每个值作为一个分区 B.用户最多能指定2级分区 C.分区列只支持string和bigint两种，且同一个表如果有多个分区列，这些分区列要么全部是string，要么全部是bigint，不能混用 D.对于分区表，在使用数据时必须指定分区列，否则会出错 答案:A AI解析:题目考察对ODPS（MaxCompute）分区机制的理解。选项A正确，因为ODPS将分区列的每个值视为独立分区，每个值对应一个物理存储目录。根据M"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 333,
+    "reason": "缺少官方解析",
+    "preview": "333.大数据计算服务(MaxCompute，原ODPS ) tunnel命令提供了丰富的参数，可以通过参数设置，对上传或者下载操作进行控制，现在有一个大文件要上传至odps某表中，想先检查一下该文件内容是否和表的定义匹配，并不实际上传，以免文件中有错误记录会导致上传出错。可以使用哪个参数实现这个功能？ A.错误记录丢弃:-dbr B.字段分隔符:-fd C.扫瞄选项:-S D.空字符串显示: -ni 答案:C AI解析:MaxCompute Tunnel命令的扫瞄选项用于验"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 337,
+    "reason": "缺少官方解析",
+    "preview": "337.大数据计算服务(MaxCompute，原ODPS ）是阿里巴巴自主研发的海量数据处理平台，主要服务于批量结构化数据的存储和计算。以下哪个场景不适合使用大数据计算服务实现？ A.大数据的分析建模 B.海量数据仓库 C.OLTP D.网站日志离线分析 答案:C AI解析:MaxCompute专为大规模数据处理设计，适用于离线分析、数据仓库及复杂建模。阿里巴巴官方文档指出其定位为OLAP（联机分析处理），处理批量任务而非实时事务。选项C提到的OLTP（联机事务处理）需要高并"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 338,
+    "reason": "缺少官方解析",
+    "preview": "338.使用ODPS动态分区时，SELECT的分区列放在列表的什么位置？ A.中间 B.开始 C.任意位置 D.结尾 答案:D AI解析:ODPS动态分区功能要求在INSERT操作中，SELECT子句的分区列必须放置在字段列表的末尾。这一设计确保了系统能够明确区分数据列与动态生成的分区列，避免解析歧义。官方文档指出，动态分区的实现依赖于列顺序，末尾位置的分区列会被自动提取并映射到目标表的分区结构中。选项D符合该规则，而其他选项的位置不符合ODPS动态分区的语法约束。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 340,
+    "reason": "缺少官方解析",
+    "preview": "340.关于ODPS类型之间的类型转化，说法不正确的是？ A.隐式类型转换是ODPS依据上下文使用环境自动进行的类型转换 B.部分类型之间不可以通过显式的类型转换，但可以通过SQL的隐式转换完成 C.不支持的隐式类型转换会导致异常 D.ODPS支持的隐式类型转换规则与显式转换相同 答案:B AI解析:隐式类型转换由系统自动完成，显式需用CAST函数。ODPS官方文档指出隐式转换规则比显式更严格，部分类型必须显式转换。选项B错误，因显式不支持的类型隐式也无法转换。；[A]正确，"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 343,
+    "reason": "缺少官方解析",
+    "preview": "343.以下哪个不属于RODPS提供的功能？ A.将某些R的模型直接转换为SQL发布 B.在R中存取ODPS的数据 C.在R中直接使用分布式的算法包处理ODPS中的大数据 D.在ODPS上支持R的任务 答案:D AI解析:RODPS是阿里云MaxCompute（原名ODPS）的R语言接口工具，主要用于数据分析和处理。根据官方文档，RODPS支持将R模型转换为SQL实现（A）、直接读写ODPS表数据（B）、调用分布式算法包处理大规模数据（C）。选项D描述的是ODPS平台原生支持"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 348,
+    "reason": "缺少官方解析",
+    "preview": "348.下列ODPS的那类函数可以用在查询的where子句中？ A.user defined table function B.user defined aggregation function C.user defined scalar function D.user defined function 答案:D AI解析:ODPS的UDF分为标量函数、聚合函数和表值函数。聚合函数用于GROUP BY后的计算，表值函数生成多行结果需配合LATERAL VIEW使用，标量函数处"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 352,
+    "reason": "缺少官方解析",
+    "preview": "352.大数据计算服务(MaxCompute，原ODPS ）中的角色(Role)是一组访问权限的集合。当需要读一组用户赋予相同的权限时，可以使用角色来授权。基于角色的授权可以大大简化授权流程，降低授权管理成本，当需要对用户授权时，应当优先考虑是否应该使用角色来完成。关于角色的说法中正确的是 A.可以将Owner视为一个角色，赋给其他用户 B.Admin是项目空间自动创建的角色，可以为该角色添加权限 C.删除一个角色时，会先检查该角色内是否还存在其他用户。若存在，则删除该角色失"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 361,
+    "reason": "缺少官方解析",
+    "preview": "361.ODPS表T中有1000万行数据，需要把这些数据全部导出到本地，下面哪一种是可行的方法？ A.用select命令，把结果重定向到文件中 B.管理控制台中选出该表，下载数据 C.找到该表的路径，然后把该路径下的文件全部下载 D.使用tunnel命令下载 答案:D AI解析:ODPS（MaxCompute）处理大数据导出时，Tunnel命令是官方推荐的高效工具，适合批量数据操作。官方文档指出Tunnel支持分块下载，适用于大规模数据场景。选项A的`select`命令默认限"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 367,
+    "reason": "缺少官方解析",
+    "preview": "367.大数据计算服务的开发人员创建了日志表，并且导入了历史数据后发现表的一个字段命名拼写有错误，可以采用____更正此问题成本最低。 A.将原表重命名,然后建张正确的表，再导入历史数据 B.在表的未尾新添加一个字段 C.删除表后重建，然后重新导入历史数据 D.通过alter命令重新命令该字段 答案:D AI解析:在大数据计算服务中，修改表结构的常见方法涉及DDL操作。根据阿里云MaxCompute官方文档，支持使用`ALTER TABLE`命令修改表的字段名，例如`ALTE"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 369,
+    "reason": "缺少官方解析",
+    "preview": "369.以下acl授权里，哪种是对ODPS的表赋予select权限？ A.grant select on table table_name to user B.grant desc on project project_name to user C.grant read on project project_name to user D.grant read on table table_name to user 答案:A AI解析:ACL授权在ODPS中用于管理对象权限。M"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 376,
+    "reason": "缺少官方解析",
+    "preview": "376.相比传统数据库支持的数据类型，下列哪个数据类型是ADS特有的。 A.boolean B.UDF_sYs_GEO_DISTANCE C.timestamp D.multivalue 答案:D AI解析:ADS特有的multivalue数据类型支持存储多个值的集合，突破了传统数据库标量类型的单一值限制。boolean和timestamp是通用基础类型，UDF_sYs_GEO_DISTANCE实为Hive中地理距离计算函数而非独立数据类型，只有multivalue作为ADS"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 393,
+    "reason": "缺少 AI 解析",
+    "preview": "393.大数据计算服务(MaxCompute, 原ODPS )中的用户基本信息表dim_user 和扩展信息表dim_user_ext都有一个整型字段user_id (业务上该字段的每个取值都唯一标识一条用户记录)。表dim_user中共有10000条记录，其中user_id 从2000到11999，dim_user_ext表中共有5000条记录，其中user_id从0到4999，开发人员在建立用户模型时需要综合用到两张表中所有用户的数据，如果有扩展信息则加上，如果没有则只用"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 455,
+    "reason": "缺少官方解析",
+    "preview": "455.作为技术人员，小王被ODPS强大的数据处理能力吸引，想去体验一下。他快速注册了一个阿里云帐号，进入官网后试图创建一个名字为test_project的ODPSproject，结果没有成功。分析，小王出错的最有可能的原因是哪一个？ A.帐号未充值，余额不足导致出错 B.帐号未开通ODPS的使用权限 C.未创建合适的accessID和accessKey D.项目名字和现有的其他帐户的名字重复 答案:D AI解析:ODPS项目名称需全局唯一，不可与其他用户重复。阿里云官方文档"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 469,
+    "reason": "缺少官方解析",
+    "preview": "469.架构师在设计用户登陆信息表时，决定建成分区表，对于分区列的选取，以下性能最好的是哪一项 A.以字符串型日期信息（天）为第一级分区列，以字符串型区县为第二级分区列 B.以字符串型区县信息为分区列 C.以字符串型日期信息（天）为分区列 D.以字段组合（字符串型区县信息，字符串型日期信息（天）为分区列） 答案:D AI解析:分区表设计时，分区列的选择需考虑数据分布与查询条件。组合分区列（如区县+日期）能更精准定位数据，减少扫描范围。典型场景中，高频查询若同时涉及区县与日期，"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 473,
+    "reason": "缺少官方解析",
+    "preview": "473.大数据计算服务中的日志表log是一张分区表，分区键是dt，每天产生一个分区用于存储当天新增的数据，现在共有dt='20160101'至dt='20160131'共31个分区的数据，为了删除20160101当天新增的数据，可以通过()方式实现。 A.delete B.alter C.truncate D.drop 答案:B AI解析:在大数据计算服务中，分区表的分区管理通常通过数据定义语言（DDL）操作实现。根据常见的大数据平台（如阿里云MaxCompute）规范，删除"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 475,
+    "reason": "缺少官方解析",
+    "preview": "475.ODPS SQL提供了CASE…WHEN…，可以进行条件判断。表tbl中包含了字段(id bigint，age bigint)，目前有三条纪录，分别为(1，20)，(2，30)，(3，60)，执行以下SQL：select id,case when age>60 then 'A' when age>40 then 'B' when age>20 then 'C' else 'D' end from tbl where id=3;哪个是正确的执行结果？ A.A B.B C"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 476,
+    "reason": "缺少官方解析",
+    "preview": "476.ODPS SQL任务中，发现join操作有数据倾斜时，可以考虑用什么方法优化。() A.增加join的instance数量 B.调整split C.用mapjoin D.调整左右表的顺序 答案:C AI解析:处理Join数据倾斜的核心在于避免大表Shuffle，mapjoin通过将小表全量分发到各计算节点直接进行内存关联，消除Reduce阶段的数据重分布。该方法适用于小表数据量可控的场景，ODPS通过/*+ mapjoin()*/语法强制启用，直接规避了常规Join因"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 479,
+    "reason": "缺少官方解析",
+    "preview": "479.大数据计算服务(Max Compute, 原ODP S) 中, 用户登录表user.login的建表语句如下create table user_login(user_jid string, login_date datetime, 1ogin_ip string) ; 表中包含了近3个月的用户登录信息,为了统计每天的用户登录次数,可以用()。 A.Select date trunc(login_date,'dd'),count(*)from user_login gr"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 489,
+    "reason": "缺少官方解析",
+    "preview": "489.某地区级网络提供商使用ODPS存储、分析宽带用户的流量信息，用户每登陆一次产生一条纪录，日均记录数在2000万条左右，目前最常见为基于区县(该市共有12个区县)、日期(天)的各种查询，其中部分查询只带有区县信息。架构师在设计用户登陆信息表时，决定建成分区表，对于分区列的选取，以下性能最好的是哪一项？ A.以字符串型日期信息（天）为分区别 B.以字段组合（字符串型区县信息，字符串型日期信息（天））为分区列 C.以字符串型区县信息为分区列 D.以字符串型日期信息（天）为第"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 492,
+    "reason": "缺少官方解析",
+    "preview": "492.某BI系统构建在大数据计算服务上，某数据分析员在分析订单的地域分布时，需要把订单表order(占用存储空间约10G)与地域维表region(占用存储空间100M)关联起来，两张表的结构如下：create table order(order_ id string,region_ id string,order amt bigint);create table region(region_id string,region _name string)在运行时发现由于订单大量"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 494,
+    "reason": "缺少官方解析",
+    "preview": "494.水果公司的交易系统每天会产生约十亿条交易纪录,这批数据需要同步到公司的大数据计算服务(MaxCompute,原0DPS)的数据仓库中,并且每天通过定时的SQL任务分析生成报表,以下哪种做法是合理的? A.创建一个非分区表,每天将新增加数据追加到表中 B.创建一个分区表,每天的增量数据放在当天的分区中 C.创建一个非分区表,每天将新增加数据追加到表中,同时每天创建个视图,该视图仅包含当日数据 D.每天创建一个基于当日数据文件的资源 答案:B AI解析:MaxComput"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 603,
+    "reason": "缺少官方解析",
+    "preview": "603.在大数据计算服务（MaxCompute,原ODPS）中可以用CAST函数将数据进行类型转换，以下哪几种转换是支持的？ A.将double转为bigint B.将bigint转为string C.将datetime转为bigint D.将datetime转为string 答案:ABD AI解析:MaxCompute的CAST函数支持部分数据类型转换。官方文档指出，数值类型如double和bigint之间允许转换；bigint转为string时若内容为合法数值字符串可反向"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 635,
+    "reason": "缺少官方解析",
+    "preview": "635.对于大数据计算服务(MaxCompute， 原ODPS )内置绝对值函数abs 描述正确的有 （ ） A.当输入参数是bigint时，返回值是bigint类型 B.当输入参数是string类型时，一定会导致异常 C.输入类型是boolean则返回值是True D.当输入参数是double时，返回值是double类型 答案:AD AI解析:MaxCompute内置绝对值函数abs的参数类型与返回类型需一致。官方文档指出，abs函数接受的参数类型包括bigint、doub"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 653,
+    "reason": "缺少官方解析",
+    "preview": "653.dataworks项目管理包括哪些内容（） A.项目配置 B.成员管理 C.数据源管理 D.资源调度管理 E.MaxCompute配置 答案:ABCDE AI解析:阿里云DataWorks平台的项目管理模块涵盖空间基础设置及协同开发功能。官方文档列出的主要管理项包含项目参数、成员权限分配、数据源集成、调度资源配置以及底层计算引擎MaxCompute的关联设置。每个选项对应实际使用中的关键操作环节：项目配置调整基础环境，成员管理控制权限，数据源连接外部存储，调度资源确保"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 687,
+    "reason": "缺少官方解析",
+    "preview": "687.元数据定义为描述数据的数据，即对数据及信息资源等的描述性信息，包括存储的位置、对象的相关信息、任务执行中的返回信息等等。阿里云表格存储Table Store的特点非常适合用来存储元数据，目前大数据计算服务MaxCompute就采用了表格存储作为元数据管理工具。和使用云数据库RDS作为元数据管理工具相比，表格存储具有以下哪些优点? A.更易扩展,理论上无限容量 B.更高的并发量,百万级别QPS C.支持更大的单表规模,可超过百TB D.更高的可用性，可达99.9% 答案"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 695,
+    "reason": "缺少官方解析",
+    "preview": "695.ODPS的控制是由那几部分组成？ A.worker B.scheduler C.executor D.master 答案:ABC AI解析:ODPS（Open Data Processing Service）作为分布式数据处理系统，其控制模块通常涉及作业调度、任务执行与资源协调。根据阿里云MaxCompute（原名ODPS）架构文档，核心控制组件包括负责资源管理与任务调度的scheduler，执行具体计算逻辑的executor，以及处理节点任务的worker。选项A（"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 698,
+    "reason": "缺少官方解析",
+    "preview": "698.ODPS Task类型包括以下哪些？ A.Join Task B.Map Task C.Reduce Task D.LocalWork 答案:ABCD AI解析:ODPS（MaxCompute）的任务类型在官方文档中有明确划分。其中，Map Task用于处理数据的映射操作，Reduce Task负责数据的归约处理，Join Task专门处理表之间的连接操作。LocalWork通常指本地调试模式下的任务，不属于ODPS分布式计算框架的标准任务类型。官方定义的任务类型未包"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 701,
+    "reason": "缺少官方解析",
+    "preview": "701.在大数据计算服务(MaxCompute，原ODPS ）的客户端工具odpscmd中开发SQL时，用户对projectf和project2都有足够的操作权限,当前所在的项目空间是project1，想要查看project2中有哪些表，可以通过以下哪几种操作？ A.show tables in project2;(注:语法 show tables [in <projectname>]) B.show project2.tables; C.use project2;show "
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 703,
+    "reason": "缺少官方解析",
+    "preview": "703.如何知道一个ODPS SQL在运行时占用了多少instance? A.根据表的大小，自己计算 B.用odpscmd提交时，从返回的状态中查看 C.使用ps-ef查看相关进程数 D.打开logview查看 答案:BD AI解析:判断ODPS SQL运行时占用的instance数量需通过平台内置机制实现。ODPS执行作业时会生成Logview链接，其中详细展示实例分布和执行状态，直接反映实际消耗的计算资源；同时通过odpscmd提交任务后返回的状态信息也会包含实例相关标识"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 713,
+    "reason": "缺少官方解析",
+    "preview": "713.以下场景中，哪些适合使用ODPS？ A.电子商务网站的在线交易 B.大型互联网企业的数据仓库和BI分析 C.PB级离线日志分析 D.基于海量数据的用户特征和兴趣挖掘 答案:BCD AI解析:《MaxCompute官方文档》指出，ODPS（MaxCompute）定位为大数据分析平台，适用于离线批量处理场景。选项B对应数据仓库与BI分析，MaxCompute支持PB级存储及复杂分析；选项C涉及离线日志处理，其分布式架构适合高吞吐批处理；选项D需要海量数据计算，与MaxCo"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 724,
+    "reason": "缺少官方解析",
+    "preview": "724.以下哪些项包含在ODPS项目空间的鉴权模型中? A.LabelSecurity B.CheckPermissionUsingACL C.SecurityConfiguration D.ProjectProtection 答案:BCD AI解析:ODPS项目空间的鉴权模型涉及多个安全机制。官方文档指出，ACL权限检查（CheckPermissionUsingACL）用于管理用户对资源的访问权限，属于基础鉴权功能。安全配置（SecurityConfiguration）涵盖"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 725,
+    "reason": "缺少官方解析",
+    "preview": "725.ODPS的自定义函数包括哪些类? A.自定义标量函数 B.自定义聚合函数 C.自定义表值函数 D.自定义扩展函数 答案:ABC AI解析:ODPS自定义函数核心类型覆盖数据处理不同维度，标量函数处理单行输入输出单个值（A），聚合函数处理多行数据返回汇总结果（B），表值函数通过UDTF实现一行输入多行输出（C）。D选项\"扩展函数\"非标准分类，不在官方定义范围内。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 732,
+    "reason": "缺少官方解析",
+    "preview": "732.ODPS MR可以通过控制Reducer的个数来进行调优，以下哪些方法可以帮用户调节Reducer的个数？ A.可以通过调整Mapper的个数间接的影响Reducer的个数(Reducer的个数默认为Mapper个数的1 / 4) B.可以通过调整Mapper的个数间接的影响Reducer的个数(Reducer的个数默认为Mapper个数的1 / 4) C.可以通过setNumReducerTasks来设置 D.可以通过addReducer随意增加Reducer的个数"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 757,
+    "reason": "缺少官方解析",
+    "preview": "757.以下哪些方法可以支持ODPS中受保护项目空间的数据流出？ A.使用owner通过policy授权 B.设置例外(Exception Policy) C.使用owner通过ACL授权 D.设置项目互信(TrustedProject) 答案:BD AI解析:ODPS的受保护项目空间通过严格的数据保护策略限制数据流出。Exception Policy允许在特定条件下绕过常规限制，例如针对特定用户或操作。TrustedProject设置项目间信任关系，使受信项目能直接访问数据"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 763,
+    "reason": "缺少官方解析",
+    "preview": "763.大数据计算服务(MaxCompute, 原ODPS )中的log表保存了日志内容，都被存到了log_ content 字段中，以访问者的IP地址开头，示例格式如下: 127.0.0.1-[22/Mar/2016:03:47:43-0700]\"GET/favicon.ico HTTP/1.1\" 404 209 http://2/.0.1\"Milla/5.0(x11;Linuxx86_64) .AppleWebKit/537.36(KHTML,likeGecko)Chro"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 797,
+    "reason": "缺少官方解析",
+    "preview": "797.用大数据计算服务构建海量的数据仓库时，分区表是一种很常见的做法，对于分区表的描述正确的有()。 A.支持hash分区、范围分区、列表分区及组合分区 B.在通过SQL读取分区表中的数据时，可以通过指定分区的方法只读取一部分分组，减少IO开销 C.可以单独处理指定分区中的数据，不会对其他分区数据产生影响 D.对于过期的数据可以将对应的分区drop掉，不会影响其他分区中的数据 答案:BCD AI解析:大数据计算服务的分区表功能提供多种分区方式，但并非所有分区类型都适用。常见"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 798,
+    "reason": "缺少官方解析",
+    "preview": "798.项目空间(project)是大数据计算服务中的基本组织单元，它类似于传统数据库的Database。以下关于项目空间的说法中正确的有()。 A.所有的对象都会属于某个项目空间 B.一个帐号可以拥有多个项目空间的权限 C.一个帐号可以创建多个项目空间，最多不能超过10个 D.通过安全授权，可以在一个项目空间中访问另一个项目空间中的数据 答案:ABD AI解析:项目空间是大数据计算服务中的核心组织单元，类比传统数据库的Database。根据MaxCompute官方文档，对象"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 800,
+    "reason": "缺少官方解析",
+    "preview": "800.下列哪些传统数据仓库的功能可以通过大数据计算服务实现？ A.即席查询 B.定时的ETL任务（数据抽取、转换和加载） C.固定报表分析 D.数据挖掘 答案:ACD AI解析:传统数据仓库的功能中，大数据计算服务支持定时ETL任务、固定报表分析和数据挖掘。定时ETL任务通过调度工具实现周期性数据处理；固定报表分析通过预定义的数据处理流程生成结构化结果；数据挖掘依托分布式计算能力支持复杂算法。即席查询依赖实时交互能力，大数据平台更侧重批量处理，实时性较弱。参考大数据平台技术"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 803,
+    "reason": "缺少官方解析",
+    "preview": "803.关于ODPS Policy授权的特点，说法正确的是？ A.授权对象支持以通配符\"*\" B.删除一个对象时，与该对象相关的policy授权会被删除 C.policy支持通过xml文件的方式授权 D.当Allow和deny同时存在时，则以deny优先原则 答案:AD AI解析:ODPS Policy授权机制的官方文档指出，Policy语法允许使用通配符\"*\"作为授权对象，例如指定所有用户或资源。当同一Policy中同时存在Allow和Deny规则时，遵循Deny优先原则，"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 805,
+    "reason": "缺少官方解析",
+    "preview": "805.当大数据计算服务的内置函数无法满足业务需求时，可以使用Java开发自定义函数，对于普通的自定义标量函数的描述正确的有()。 A.可以实现多个参数类型不同的evaluate方法，系统调用函数时会根据参数的类型自动匹配到正确的方法 B.在函数类中，函数的逻辑通过evaluate方法实现 C.每个用户只能使用自己创建的UDF D.在UDF中可以使用MaxCompute的资源（Resource），比如通过addfile上传的文件资源 答案:ABD AI解析:在大数据计算服务中"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 807,
+    "reason": "缺少官方解析",
+    "preview": "807.大数据计算服务中图计算框架再计算过程中通过对图进行编辑、演化最终求解出结果，在计算过程中用户可以对图进行哪些编辑操作？ A.读取本地数据修改点的权值 B.增加边 C.删除点 D.修改边的权值 E.增加点 答案:BCDE AI解析:大数据计算服务的图计算框架允许在计算过程中动态修改图结构及相关属性。框架设计上通常支持对顶点和边的增删改操作，例如GraphX、Pregel等图处理模型的API均提供了添加/删除顶点（addVertex/removeVertex）、添加/删除"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 808,
+    "reason": "缺少官方解析",
+    "preview": "808.大数据计算服务中提供的是海量数据的存储和计算能力，和我们熟悉的关系型数据库存在较大的差别。以下说法中正确的是？ A.不支持事务 B.不支持delete C.不支持索引 D.不支持压缩 答案:ABC AI解析:大数据计算服务（如MaxCompute、Hadoop生态系统）与关系型数据库的核心差异主要体现在数据处理机制和功能支持上。根据阿里云MaxCompute文档及Hadoop相关设计原理，以下分析各选项：事务处理在传统关系型数据库中通过ACID保证，但大数据计算服务通"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 809,
+    "reason": "缺少官方解析",
+    "preview": "809.大数据计算服务中的授权是指把某些对象的某些权限赋给一些指定的用户，必须包括以下哪三个要素？ A.操作（Action，比如读、写等） B.效果（Effect，比如同意、拒绝等） C.主体（Subject，可以是用户、角色等） D.客体（Object，可以是表、资源等） 答案:ACD AI解析:大数据授权机制基于访问控制模型，核心要素包含权限作用对象和操作范围。主体（Subject）指权限持有者（用户/角色），客体（Object）是被操作的资源（表/文件），操作（Acti"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 810,
+    "reason": "缺少官方解析",
+    "preview": "810.大数据计算服务中，表ods_sale_detail存放的是销售明细记录，建表语句如下：create table ods_sale_detail(sale_date datetime, region string, amt decimal)；其中sale_date字段表示销售的日期，amt表示销售金额，想要找出所有汇总销售额大于10000的日期以及当日的销售额，以下哪几个SQL可以达到这个目的？ A.select sale_ date,sum(amt)from ods_"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 812,
+    "reason": "缺少官方解析",
+    "preview": "812.阿里云MaxCompute中，下列对分区描述正确的是() A.需要在创建表时指定分区空间 B.以将分区类比为文件系统下的目录 C.MaxCompute将分区列的每个值作为一个分区 D.目前仅支持2级分区 答案:ABC AI解析:阿里云MaxCompute的分区表在创建时需通过PARTITIONED BY子句指定分区列，确定分区结构。官方文档将分区机制类比为文件系统的目录层级结构，每个分区对应特定列值下的数据存储，不同列值形成独立分区。MaxCompute支持多级分区设"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 813,
+    "reason": "缺少官方解析",
+    "preview": "813.阿里云MaxCompute中，下列对lifecycle描述正确的是() A.使用lifecycle设置表的生命周期 B.lifecycle的单位是月 C.可以使用浮点数设置lifecycle D.Lifecycle可以不用设置 答案:AD AI解析:MaxCompute官方文档指出，生命周期（LIFECYCLE）用于管理表数据的自动清理，单位为天。创建表时通过`LIFECYCLE`关键字指定，若未设置则数据永久保留。选项A对应表的生命周期设置语法，正确；选项B错误，单"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 817,
+    "reason": "缺少官方解析",
+    "preview": "817.在大数据计算服务(MaxCompute,原ODPS)图计算的迭代(Super Step)过程中,用户可以进行操作。() A.修改点或边的权值 B.发送消息给某些点 C.增加、删除点或边 D.设置当前点的状态为结束或非结束状态 E.通过Dispatcher将全局信息分发到点或边 答案:ABCD AI解析:该题考察对MaxCompute图计算迭代机制的理解。根据MaxCompute官方文档，图计算模型中每个SuperStep允许的操作包括：顶点可修改自身或边的属性值（A）"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 819,
+    "reason": "缺少官方解析",
+    "preview": "819.大数据计算服务(MaxCompute,原0DPS)SQL支持子查询,对于子查询的使用描述,以下正确的有()。 A.子查询可以与另一个子查询或者表进行关联(join) B.子查询不能做为mapjoin中的小表 C.子查询可以嵌套 D.子查询要有别名 答案:ACD AI解析:MaxCompute SQL中，子查询支持关联其他子查询或表（JOIN操作），需在FROM子句中使用别名。嵌套子查询符合标准语法。MapJoin支持子查询作为小表。参考MaxCompute官方文档对子"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 820,
+    "reason": "缺少官方解析",
+    "preview": "820.大数据计算服务(MaxCompute,原ODPS)的日志表1og是一张分区表,分区键是dt,每天新增的数据保存在当天的分区中,分区的格式如dt='2016010',dt='20160102'...表的生命周期属性设置成了30,以下描述正确的有()。 A.最后一次修改时间超过30天的分区将会被删除 B.无论数据是否过期,表结构不会被删除 C.当所有数据分区都因生命周期到了被删除后,该表会被自动删除 D.只要表中总的分区数量不超过30个,则旧的分区就不会被删除 答案:AB"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 823,
+    "reason": "缺少官方解析",
+    "preview": "823.大数据计算服务(MaxCompute,原ODPS)提供了eclipse plugin,该插件提供了基于eclipse的MR开发框架,可以非常方便的进行大数据计算服务的MR的开发。开发时可以添加以下()类。 A.Mapper B.Combiner C.Reducer D.MapReduce 答案:ABC AI解析:MaxCompute的MR开发框架基于Hadoop MapReduce模型，参考阿里云官方文档中的MR编程指南。在插件中添加的类对应MR任务处理流程中的基本组"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 825,
+    "reason": "缺少官方解析",
+    "preview": "825.根据job_ids查询表information_schema.current_job通过DMS导入导出菜单查看小王开发了一个ODPS UDF，打成jar包之后，作为资源上传到项目空间里，创建了对应的函数，但是在执行的时候发现该jar包依赖的另一个jar包不存在，他应该怎么办才能正常使用？ A.在使用jar命令调用的时候，在classpath参数中增加依赖jar包的路径即可 B.将依赖的jar包作为资源上传到项目空间，在UDF的初始化函数setup中，使用readJar"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 826,
+    "reason": "缺少官方解析",
+    "preview": "826.以下哪些情况不适合使用 ODPS mapjoin？ A.or连接关联条件 B.关联表中有临时表 C.两个表无条件关联 D.两个大表关联 答案:BCD AI解析:ODPS MapJoin适用于小表与大表关联，避免数据倾斜和大表Shuffle。根据ODPS官方文档，MapJoin的使用限制包括：禁止全连接（产生笛卡尔积）、不能用于两个大表、涉及别名或临时表可能无法识别小表。选项B中临时表可能无法被判定为小表；选项C的无条件关联生成笛卡尔积，数据量爆炸式增长；选项D的两个大"
+  },
+  {
+    "sourceName": "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "originalNumber": 828,
+    "reason": "缺少官方解析",
+    "preview": "828.在大数据计算服务中的客户端工具odpscmd中开发SQL时，用户对project1和project2都有足够的操作权限，当前所在的项目空间是project1，想要查看project2中有哪些表，可以通过以下哪几种操作？ A.show tables in project2; B.show project2. tables; C.use project2;show tables; D.show tables project2 答案:AC AI解析:该题考查MaxCompu"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 205,
+    "reason": "缺少官方解析",
+    "preview": "205.数据工场DataWorks (原DataIDE )中，通过数据开发面板的任务开发，可以创建节点任务，也可以创建工作流任务，而工作流任务内部又可以创建工作流节点，关于节点任务和工作流节点的说法中错误的是( )。 A.节点任务依赖的上游任务可以是工作流任务。工作流节点无法单独配置依赖属性 B.节点任务依赖的上游任务可以是工作流任务。也可以是某个工作流节点 C.节点任务可以配置调度周期,工作流节点不能单独配置调度周期 D.同个工作流的工作流节点之间可以配置依赖关系 答案:B"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 331,
+    "reason": "缺少官方解析",
+    "preview": "331.DataIDE中，调度任务每次运行前都先将任务实例化，即生成一个实例，调度运行时实际上在执行相应的实例。在调度的不同阶段，实例会处于不同的状态，包括未运行、运行中、运行成功、运行失败、等待时间、等待资源等。当实例处于__状态时不能手工停止。 A.未运行 B.运行中 C.等待时间 D.等待资源 答案:A AI解析:在DataIDE调度系统中，实例的生命周期包含多个状态。未运行状态表示任务实例已生成但尚未被调度器触发执行。此时实例仅存在于系统记录中，未分配任何执行线程或资"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 347,
+    "reason": "缺少官方解析",
+    "preview": "347.Data lDE上某个数据同步任务执行失败，运行日志中提示: \"Code OdpsReader33] Description[分区配置错误]-分区配置错误，根据您所配置的分区没有匹配到源头表中的分区.源头表所有分区是:[ ds='2010328' ds=20160328'.done' ds=20160329' ds=20160330'ds='20160330.done' ],您配置的分区是:[ ds=S{daytime} ],请您根据实际情况作出修改。\"(）会造成类似"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 359,
+    "reason": "缺少官方解析",
+    "preview": "359.资源（(Resource)是大数据计算服务(MaxCompute，原ODPS)的特有概念。用户如果想使用MaxCompute的MapReduce或自定义函数(UDF)功能，需要依赖资源来完成。Data IDE中，可以通过数据开发面板的资源管理上传资源,目前支持的资源类型有( )。 A.jar、file、archive B.jar、file、python C.jar、archive、python D.file、archive、python 答案:A AI解析:MaxCo"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 375,
+    "reason": "缺少官方解析",
+    "preview": "375.Data IDE工作流任务支持一次性调度和周期调度两种类型，对于周期性调度可以设置不同时间粒度的调度周期，以下对任务按月调度的调度周期配置，说法错误的是？ A.可以配置每月有固定几天需要运行 B.配置每月30日运行，则2月份该任努不会运行 C.无法配置每月1日和15日运行 D.无法配置每月最后一天运行 答案:C AI解析:Data IDE按月调度任务支持配置每月固定日期运行，包括设置多日（如1日和15日）及月末最后一天（2月自动适配）。选项C错误，因系统允许同时配置多"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 445,
+    "reason": "缺少官方解析",
+    "preview": "445.大数据开发治理平台DataWorks的运维中心的一个周期实例中发现当天某个节点A报错，导致所有的下游节点未运行，此时对节点A使用那种操作方式，不能将下游的节点任务启动起来？ A.置成功 B.终止运行 C.重跑（A节点重跑结果成功） D.重跑下游（A节点重跑结果成功） 答案:D AI解析:在DataWorks运维中心，节点实例的状态决定下游任务是否触发。节点A报错时，其状态为失败，下游无法运行。终止运行操作会使节点状态停留在终止，下游仍无法启动。置成功会将节点状态强制改"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 448,
+    "reason": "缺少官方解析",
+    "preview": "448.对于以下冷热分离+计算存储分离数据同步流程 1.创建索引的请求会被转发到主分片，通过ReadAndWriteEngine来完成接收 2.记录本次index请求操作到translog 3.首先数据会在内存进行存储，当达到阈值之后，便会刷新到磁盘segment文件中的增量数据 4.在主分片中定期同步数据到磁盘的临时目录 5.副分片会根据commit segment从刚才的临时目录中拉取数据到自己节点目录中，完成数据的同步写入 排序正确的是哪个？ A.13254 B.124"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 458,
+    "reason": "缺少官方解析",
+    "preview": "458.在DataIDE中可以使用数据同步任务，将云数据库RDS(MySQL)数据同步至大数据计算服务(MaxCompute，原ODPS)的分区表中，通常会把日期作为目标表的分区键，以方便实现增量数据加载。现在想把RDS中的表A中的数据，按照不同的日期导人到MaxCompute中表B对应的不同分区中(分区字段的格式为yyyymmdd)，如将20160318的数据导入到MaxCompute表的分区'2016-03-18'中，MaxCompute的分区可以通过()实现。 A.在M"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 478,
+    "reason": "缺少官方解析",
+    "preview": "478.DataIDE的数据同步任务Task1，将数据从大数据计算服务(MaxCompute，原ODPS)同步到云数据库RDS(MySQL)中，源数据表中存在数据质量问题，加载的时候会有部分出错记录，Task1中已经配置了容错记录条数，为了保证正确记录能够保留，在数据加载与控制中，还需要对Task1配置() A.数据过滤条件 B.视为脏数据，保留原有数据（insertinto） C.作业速率上限 D.源表切分主键 答案:B AI解析:数据同步任务中，当源数据存在脏数据且已配置"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 480,
+    "reason": "缺少官方解析",
+    "preview": "480.数据工场DataWorks(原DataIDE)中，按天调度的周期性任务task1的定时调度时间设置为2点0分；按天调度的周期性任务task2的定时调度时间设置为0点0分，task1依赖属性的**任务设置为task2，关于task1以下说法正确的是？ A.每天0点0分开始执行 B.每天2点0分一定开始执行 C.每天只要task2当前周期执行状态为成功，则task1马上开始执行 D.每天2点0分后task2当前周期执行状态为成功，则task1可以开始执行 答案:D AI解"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 481,
+    "reason": "缺少官方解析",
+    "preview": "481.DataX是阿里集团发起的开源项目,是一种离线数据同步的工具,支持多种异构数据源之间的高效数据同步。当Datax的数据源为关系型数据库Mysql,Postgresql或SQL Server时,均支持字段类型为()的字段作为切分列,源数据中的表按照切分列分成多份,并发执行,提高同步速度 A.布尔型 B.整数类型 C.浮点类型 D.blob类型 答案:B AI解析:DataX在处理关系型数据库如MySQL、PostgreSQL、SQL Server时，切分列需选择适合范围"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 482,
+    "reason": "缺少官方解析",
+    "preview": "482.组织是数据工场DataWorks中的一个概念，一个公司开通数据工场DataWorks服务就需要创建一个组织，组织之间相互隔离。关于组织的说法中错误的是。 A.数据工场DataWorks项目空间是组织的基本对象 B.一个数据工场DataWorks的项目空间可以属于多个组织 C.一个账号只能所属一个组织，但是一个账号可以加入多个数据工场DataWorks项目空间 D.一个组织可以创建多个数据工场DataWorks项目空间 答案:B AI解析:数据工场DataWorks中组"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 483,
+    "reason": "缺少官方解析",
+    "preview": "483.在数据工场DataWorks中，可以通过修改数据同步节点中的配置属性来影响数据同步的操作。当从云数据库RDSMySQL版抽取数据时，为提高数据同步的效率可以设置成多并发，需要配置实现。 A.清理规则 B.在RDS中为该表创建主键 C.不要设置作业速率上限＋切分键 D.错误记录条数 答案:C AI解析:在DataWorks中，数据同步任务的并发配置调整是优化效率的关键。根据DataWorks官方文档，多并发抽取数据时需依赖切分键（SplitPK）对数据分片，同时解除作业"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 484,
+    "reason": "缺少官方解析",
+    "preview": "484.在数据工场DataWorks中使用数据同步任务进行数据同步时，数据同步任务读源头表需要权限，写目标表也需要权限，如数据同步任务日志提示：ODPS-0420095：Access Denied-Authorization Failed［4019］，You have NO privilege'odps:Describe' on {acs:odps:*:projects/xxx_prj/tables/xxx_table}.Context D:2ac7aac3-0928-45d"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 495,
+    "reason": "缺少官方解析",
+    "preview": "495.通过DataIDE的数据管理模块，将项目空间prj1的表table1设置成\"隐藏\"后，除了表owner或项目空间prj1的项目管理员之外的成员都不能通过数据管理模块查看table1的表结构，以下说法正确的是 A.table1的owner可以撤销table1的隐藏状态 B.只有prj1的项目空间管理员可以撤销table1的隐藏状态 C.所有项目空间的成员都无法申请表table1的查询权限 D.所有项目空间的成员都无法通过执行descprj1.table1查看表信息 答案"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 657,
+    "reason": "缺少官方解析",
+    "preview": "657.在dataworks调度周期配置中，下面说法正确的有哪些项（） A.任务的时间属性目前支持月，周，天，小时和分钟5中配置方式，目前能支持的最短时间为5分钟。 B.周期运行的任务依赖关系的优先级大于时间属性，即在时间属性决定的某个时间点到达时，任务实例运行的前提是上游依赖是否全部运行成功。 C.上游依赖的实例没有全部运行成功并且定时运行时间已到，则实例仍为未运行状态 D.上游依赖的实例全部运行成功并且定时运行时间还未到，则实例进入等待时间状态。 E.上游依赖的实例全部运"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 659,
+    "reason": "缺少官方解析",
+    "preview": "659.在dataworks中的数据开发任务运行包含以下哪些选项（） A.页面直接运行 B.测试运行 C.系统自动运行 D.补数据运行 答案:ABCD AI解析:DataWorks的数据开发任务运行方式包括多种模式以适应不同场景需求。参考DataWorks官方文档，任务运行支持在开发界面直接手动触发（页面直接运行），用于调试阶段的临时执行（测试运行），按调度配置定时触发（系统自动运行），以及针对历史数据或特定时间范围重新处理（补数据运行）。四个选项均对应实际功能模块，覆盖开发"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 661,
+    "reason": "缺少官方解析",
+    "preview": "661.dataworks工作流程中的生产运维节点支持对节点任务的操作包括哪些（） A.补数据 B.重跑 C.暂停 D.终止 答案:ABCD AI解析:DataWorks的生产运维节点功能模块中，补数据用于处理历史数据场景，重跑可针对实例重新执行，暂停能够暂时停止任务调度，终止用于强制停止运行中的实例。各操作对应DataWorks运维中心的任务管理功能，具体操作入口位于周期任务实例列表的右键菜单及补数据任务界面。官方产品文档的任务运维部分明确列举了这些操作权限和场景。补数据属"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 664,
+    "reason": "缺少官方解析",
+    "preview": "664.大数据及开发平台的功能模块有哪些？ A.组织管理 B.项目管理 C.数据开发 D.数据管理 E.运维中心 答案:ABCDE AI解析:大数据及开发平台的功能模块通常涵盖多个方面，用于支持数据的全生命周期管理及协同工作。组织管理涉及用户权限、角色分配及部门结构管理，确保不同团队协作时的访问控制。项目管理模块负责资源协调、任务分配及进度跟踪，适用于多项目并行场景。数据开发提供数据处理、脚本编写、任务调度等功能，是平台核心能力之一。数据管理关注存储、元数据、质量监控及血缘追"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 721,
+    "reason": "缺少官方解析",
+    "preview": "721.Data IDE中，调度任务每次运行前都先将任务实例化，即生成实例，调度运行时实际上在执行相应的实例。周期性调度任务每天自动调度的实例都是在当天23:30开始生成的，以下说法正确的是？ A.任务task1是按天调度的周期性调度任务，2016年4月9日23点00分，把task1的定时时间从原来零点整改成8点30分，4月10日，task1的实例定时时间为8点30分 B.任务task1是任务task2的上游任务，2016年4月9日11点30分，把task2的上游任务换成ta"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 749,
+    "reason": "缺少官方解析",
+    "preview": "749.在使用Data IDE进行数据同步时，会因为数据质量问题，导致部分纪录无法从源表同步至目标表中去。任务Task1是从云数据库RDS(MySQL)表同步至大数据计算服务(MaxCompute，原ODPS)表中，可以通过设置以下哪两项进行容错控制？ A.设置\"当出错的记录数超过\"的值，即最大容错纪录条数 B.设置作业速率上限 C.设置切分键 D.设置\"错误百分比达到\"的值，即最大容错纪录条数占总条数的比例 答案:AD AI解析:Data IDE（现DataWorks）的数"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 792,
+    "reason": "缺少官方解析",
+    "preview": "792.以下属于DataWorks数据治理实施路径的是？ A.数据资产管理 B.元数据管理 C.数据安全管理 D.主数据管理 答案:ABCD AI解析:DataWorks的数据治理实施路径在官方文档中明确涵盖多个关键模块。数据资产管理涉及数据的全生命周期管理，包括分类、确权、共享等环节。元数据管理作为基础能力，提供数据血缘、影响分析等功能，支撑数据发现与治理。数据安全管理模块集成权限控制、脱敏审计等机制，保障数据合规使用。主数据管理功能通过标准化流程确保核心业务数据一致性，实"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 815,
+    "reason": "缺少官方解析",
+    "preview": "815.DataIDE中，可以通过脚本开发创建SQL脚本文件，用于执行一些临时性的代码。以下哪些情况下可以使用脚本文件？() A.数据科学家在脚本文件里调度机器学习任务实现复杂分析 B.数据分析师使用SQL探查表数据 C.数据开发人员使用建表语句建表 D.数据开发人员发调度任务调试成功后，使用SQL检查表中的数据是否正常 答案:BCD AI解析:DataIDE的SQL脚本文件主要用于执行临时性SQL操作。题目中选项B涉及使用SQL进行数据探查，属于典型的临时查询场景；选项C的"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 816,
+    "reason": "缺少官方解析",
+    "preview": "816.DataIDE项目空间的管理员角色拥有项目空间的各种管理权限，以下操作中()必须由拥有项目管理员角色的成员来完成。 A.添加调度资源组 B.把组织成员添加为项目成员并分配合理的角色 C.创建DataIDE项目空间 D.添加数据源 答案:BD AI解析:DataIDE项目空间管理员的核心权限聚焦于成员管理和关键资源配置。根据权限设计规范，将组织成员纳入项目空间并分配角色（B）涉及成员准入及权限分配，直接关联项目安全边界；添加数据源（D）需操作底层数据连接权限，属于敏感资"
+  },
+  {
+    "sourceName": "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "originalNumber": 822,
+    "reason": "缺少官方解析",
+    "preview": "822.DataX是阿里集团发起的开源项目，是一种离线数据同步的工具，支持多种异构数据源之间的高效的数据同步。DataX支持的数据源包括()。 A.关系型数据库：Mysql、SQLserver、Oracle B.阿里云大数据分析处理MaxCompute（原ODPS）、Hbase、阿里云分析型数据库（AnalyticDB，原ADS） C.半结构化数据存储：阿里云表格存储（Table D.非结构化数据存储：图片、视频 答案:ABC AI解析:DataX作为阿里开源离线数据同步工具"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 135,
+    "reason": "缺少官方解析",
+    "preview": "135.某信贷公司推出一款线上贷产品，采用阿里云的数据处理技术，通过对会员的历史数据进行分析，包括交易量、网上信用评价、企业自身经营状况等等，每天处理的数据量在20P左右，基于这些数据对用户信用进行聚类分析建模并产生预测数据，用户线上申请贷款时，能迅速根据用户模型预测结果进行资质评估、授信等。请根据对阿里云产品的理解，从下述方案中选择成本最低、性能最好的一个是________。 A.使用MaxCompute对数据进行建模，然后使用该模型对所有符合贷款条件的会员进行资质评估和授"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 313,
+    "reason": "缺少官方解析",
+    "preview": "313.某企业使用ADS分析数据，其中企业商品库存表(stock_detail）为一张超过20亿条纪录的事实表，描述了企业目前为止的库存情况,事实列仅包含库存数一列。商品信息表(time_detail）描述了商品的具体信息，包括商品信息标识、商品基本信息标识、商品通用信息属性等等20个属性信息,纪录条数在10万条左右，本表中的商品基本信息标识引用用另一张存在多个层级维度的维表商品基本信息表(basic_detail，包含30个属性)。以下设计方案中，综合成本和性能两个角度来看"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 324,
+    "reason": "缺少官方解析",
+    "preview": "324.A为ADS中的普通表,a为A的分区列，类型为bigint，b为A中的普通列，类型为bigint，请判断以下相关SQL中哪句语法是错误的？ A.SELECTa FROMA ORDER BY a LIMIT 100 B.SELECT a+b, count(a)FROM A group by a+b ORDER Bya C.SELECT a,b FROM A ORDER BY a+b LIMIT 100 D.SELECT a, count(a)FROM A group by"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 354,
+    "reason": "缺少官方解析",
+    "preview": "354.某电商使用ADS进行数据分析，其中商品信息表纪录了商品的型号、价格、厂家等等信息，从数据分析角度来讲，它是一张维表。该表含了超过2000万条的纪录，大小在5G左右，在ADS中如何处理该表？ A.必须建成ADS分区表，将会有一些限制，比如不能和不同普通表组上的表进行关联等 B.建表时指定为ADS的维表，将分区数设置为1 C.建表时指定为ADS的维表，即不进行拆分，可以和任意表关联 D.可将该表直接打平到和该表关联的事实表中，做成—张宽表，减少join，提升性能 答案:A"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 360,
+    "reason": "缺少官方解析",
+    "preview": "360.从ODPS导入数据到ADS的时候，导入路径的格式为？ A.odps://project_nameltable_name:partition_spec B.odps://project_nameltable_name/partition_spec C.odps://project_nameltable_name (partition_spec) D.odps://project_nameltable_name partition_spec 答案:B AI解析:在阿里云数"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 366,
+    "reason": "缺少官方解析",
+    "preview": "366.对于ADS的连接方式，以下说话正确的是? A.以上都是 B.安装了php-mysql-5.1.x模块的php环境 C.使用版本为5.4系列的mysql-jdbc驱动 D.mysql5.6的客户端 答案:A AI解析:ADS支持多种连接方式，其官方文档指出需要PHP环境安装特定版本的php-mysql模块（B），使用指定版本的JDBC驱动（C），并依赖对应版本的MySQL客户端工具（D）。选项B、C、D分别对应不同连接场景下的必要条件，均符合ADS的连接规范，故全部正确"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 466,
+    "reason": "缺少官方解析",
+    "preview": "466.下列关于ADS的说法中，哪一项是正确的？ A.表组的属性可以修改，修改后马上生效 B.对于批量插入的表可以建立二级list分区，二级list分区是非动态分区，分区值由用户导入时指定 C.minredundancy是表组的一个属性，可以指定不同的值没，比如1、2、3、4等，缺省值为2 D.表组是一个逻辑概念，同一个表组中的表可以选择同时上线，再删除表组时，会把表组中的表一起删除 答案:B AI解析:ADS中关于表分区的设计，二级分区支持LIST和RANGE两种类型。LI"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 468,
+    "reason": "缺少官方解析",
+    "preview": "468.某信贷公司推出一款线上产品，采用阿里云的数据处理技术，通过对会员的历史数据进行分析，包括交易量、网上信用评价、企业自身经营状况等等，每天处理的数据量在20P左右，基于这些数据对用户信用进行建模并产生预测数据，用户线上申请贷款时，能迅速根据用户模型预测结果进行资质评估、授信等。请根据你对阿里云产品的理解，下述方案中成本最低、性能最好的一个是？ A.使用ODPS对数据进行建模，然后使用该模型对所有复合贷款条件的会员进行资质评估和授信评估，将处理结果保存在OTS中，以供实现"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 472,
+    "reason": "缺少官方解析",
+    "preview": "472.关于ADS中的ECU，哪个说法是正确的？ A.接入节点和计算节点可以指定不同类型的ECU，并且需要在创建DB时就确定，DB一旦创建，ECU类型不能修改 B.ECU的数量，在DB创建后可以修改。即使在DB的使用过程中，也可以随时调整（扩容或者缩容） C.接入节点和计算节点必须指定相同类型的ECU，并且需要在创建DB时就确定，DB一旦创建，ECU类型不能修改 D.创建DB时可以指定ECU的数量，必须为偶数，最小为4 答案:B AI解析:ADS中ECU数量具备弹性伸缩能力。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 530,
+    "reason": "选项少于 2 个",
+    "preview": "530.ADS支持以下哪些连接方式？ A.安装了php-mysql-5.1.x 模块的php环境 B. 答案:ABCD 解析:AnalyticDB for MySQL支持通过DMS（Data Management Service）、MySQL客户端（Navicat for MySQL、DBeaver、DBVisualizer、SQL WorkBench/J）、BI可视化工具、或者MySQL命令行工具连接AnalyticDB for MySQL集群。您也可以在应用程序中通过配置"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 548,
+    "reason": "缺少官方解析",
+    "preview": "548.ADS的DMS图形界面提供了哪些性能相关的信息？ A.QPS B.访问量 C.磁盘使用率 D.平均响应时间 答案:ABCD AI解析:DMS图形界面用于监控和管理数据库性能，相关指标通常包括QPS（每秒查询数）、访问量（请求总数）、磁盘使用率（存储资源占用情况）、平均响应时间（查询处理速度）。阿里云DMS文档中明确提到这些性能参数用于实时监控和优化数据库运行状态。QPS反映处理能力，访问量显示负载大小，磁盘使用率涉及存储健康，平均响应时间衡量效率高低，都属于关键监控项"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 696,
+    "reason": "缺少官方解析",
+    "preview": "696.使用用户管理控制台来创建ADS时，需要提供ECU的哪些信息? A.vCPU B.内存 C.存储 D.数量 答案:ABCD AI解析:创建 ADS（自动驾驶数据服务）时，通常需要提供全面的信息以确保系统的有效配置和管理。ECU 的 AvCPUB 信息有助于了解车载信息娱乐控制单元的详情；内存信息对于保障系统性能与稳定性不可或缺；存储信息涉及设备类型、容量及状态，是数据存储和备份的关键；数量信息则明确存储设备的个数，对整体资源配置有重要意义。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 709,
+    "reason": "缺少官方解析",
+    "preview": "709.ADS的普通表分区，支持哪些分区方式？ A.List B.Interval C.Hash D.Range 答案:AC AI解析:ADS的分区方式在官方文档中有明确说明。List分区允许按枚举值划分数据，常用于离散值场景。Hash分区通过散列函数将数据分布到不同分区，适用于均衡存储。Interval属于Range的扩展类型，自动管理范围分区，但普通表可能不支持。Range分区按连续范围划分，但可能仅适用于特定表类型。文档指出普通表支持List和Hash，排除其他选项。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 736,
+    "reason": "缺少官方解析",
+    "preview": "736.在ADS中，两个事实表进行join的充要条件包括以下哪些项？ A.两张表的hash分区数必须—致 B.这两个表在一个表组 C.两张表的join key至少有一列建立了hash map索引 D.这两个表的join key是hash分区列 答案:ABCD AI解析:在 ADS 中，两个事实表进行 join 时，两张表的 hash 分区数必须一致，以保证数据存储和查询的高效；两表要在同一表组，便于管理与提升性能；join key 至少一列建 hash map 索引，可快速定"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 748,
+    "reason": "缺少官方解析",
+    "preview": "748.以下哪些属于ADS的特色功能？ A.聚集列 B.多值列 C.空间列 D.智能自动索引 答案:ABD AI解析:ADS的特色功能在官方文档中有明确说明。聚集列通过预聚合提高查询效率，多值列支持存储数组或JSON格式数据，智能自动索引由系统动态维护优化查询。空间列涉及地理信息处理，未在ADS核心特性中提及。正确选项为ABD。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 753,
+    "reason": "缺少官方解析",
+    "preview": "753.ADS创建普通表的时候有那些限制？ A.一张普通表至少有一级Hash分区并且分区数不能小于8个 B.—个普通表组最多可以创建256个普通表 C.—个普通表最多不能超过1024列 D.—张普通表至少有一级Hash分区并且分区数不能多于1000个 答案:ABC AI解析:ADS对普通表的创建存在特定限制。选项A指出普通表必须包含至少一级Hash分区且分区数≥8，这与ADS的分区规则一致，分区数下限为8。选项B提到普通表组内最多容纳256张普通表，符合官方对表组规模的定义。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 802,
+    "reason": "缺少官方解析",
+    "preview": "802.使用ADS可以很好的支持即席查询，对一些复杂的查询，也能在很短的时间内返回处理结果。以下关于ADS中查询涉及的说法正确的有()。 A.查看SQL审计日志 B.内外网切换 C.备份实例 D.创建实例 答案:BCD AI解析:ADS（AnalyticDB）中查询相关操作，阿里云文档指出内外网切换用于调整访问方式，备份实例保障数据安全，创建实例是基本管理操作。SQL审计日志通常用于监控审计，与查询性能无关。选项B、C、D涉及实例的网络配置、数据维护及生命周期管理，属于查询支"
+  },
+  {
+    "sourceName": "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "originalNumber": 824,
+    "reason": "缺少官方解析",
+    "preview": "824.ADS中不支持以下哪些表连接方式？() A.right B.笛卡尔积 C.semi D.full 答案:ACD AI解析:《AnalyticDB MySQL版3.0开发手册》中明确其支持的JOIN类型为INNER JOIN、LEFT JOIN，其他类型如RIGHT JOIN、FULL OUTER JOIN、SEMI JOIN不在官方支持范围内。RIGHT JOIN（选项A）需要右表驱动左表，但ADS优化器未实现该逻辑；SEMI JOIN（选项C）属于特殊连接语义，未提"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 180,
+    "reason": "缺少官方解析",
+    "preview": "180.通过备份文件及日志文件，RDS可以将实例数据恢复至多少天内的任意时刻 （ ） A.5天 B.7天 C.6天 D.3天 答案:C AI解析:阿里云RDS实例的数据恢复能力基于备份文件和日志文件的保留策略，官方文档明确支持实例数据恢复至保留期内的任意时间点。选项中，7天为默认保留周期，覆盖完整的备份与日志链条，其他选项均小于标准周期，无法满足完整恢复的时间范围要求。阿里云产品文档中RDS备份恢复章节对此有详细说明。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 311,
+    "reason": "缺少官方解析",
+    "preview": "311.预付费模式RDS实例过期后，系统会自动进行什么操作。 A.预付费模式RDS实例过期后，系统会自动进行什么操作。 B.过期当天删除实例 C.实例将会被锁定，无法进行读写 D.自动发邮件通知续费，实例可以正常使用 答案:B AI解析:阿里云预付费实例的资源有效期管理策略。当预付费RDS实例到期后，根据阿里云官方文档对预付费资源生命周期的规定，未及时续费的实例会在到期当天触发资源释放流程。选项B描述的\"过期当天删除实例\"符合这一机制。选项A为重复题干无效；选项C涉及的是实例"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 350,
+    "reason": "缺少官方解析",
+    "preview": "350.DRDS不具备以下哪个特性？ A.小表广播 B.分库分表 C.平滑扩容 D.智能索引 答案:D AI解析:DRDS作为分布式数据库中间件，其核心特性聚焦于分布式架构下的数据分片管理与扩展能力，分库分表解决单机容量瓶颈，小表广播通过冗余复制提升跨库查询效率，平滑扩容实现业务无感的数据重分布。智能索引属于传统单机数据库的查询优化技术，需基于具体存储引擎实现，而DRDS自身不具备该原生能力。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 363,
+    "reason": "缺少官方解析",
+    "preview": "363.以下哪个是RDS性能上的优势？ A.花费人力成本高 B.无需运维 C.资源利用率低 D.需要自建RAID 答案:B AI解析:RDS（Relational Database Service）作为托管型数据库服务，其核心特性之一是自动化运维管理。AWS官方文档指出，RDS通过自动处理硬件配置、数据库软件安装、补丁更新、备份恢复等任务，减少了用户手动操作的需求。选项A（人力成本高）与RDS降低运维成本的目标矛盾；选项C（资源利用率低）不符合云服务弹性伸缩的特点；选项D（自"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 456,
+    "reason": "缺少官方解析",
+    "preview": "456.在实际应用中，哪种性能指标表示RDS实例磁盘空间的使用量？ A.磁盘空间 B.CPU利用率 C.IOPS D.连接数 答案:A AI解析:RDS（关系型数据库服务）提供多种监控指标，其中\"磁盘空间\"指标直接反映磁盘空间使用量，如 Amazon RDS 中的\"FreeStorageSpace\"指标表示可用存储空间大小。而 CPU 利用率反映 CPU 使用情况，IOPS 表示磁盘 I/O 操作性能，连接数体现数据库连接数量，它们均与磁盘空间使用量无直接关联。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 457,
+    "reason": "缺少官方解析",
+    "preview": "457.在RDS连接闪断发生的场景中，有可能是由于实例本身故障引起的是哪个？ A.用户升级RDS实例配置 B.用户升级数据库版本 C.主库出现故障 D.执行数据回滚操作 答案:C AI解析:RDS的高可用架构通常采用主备模式，主库负责处理读写请求。主库故障时，系统会自动触发主备切换以保证可用性。主备切换过程中，原主库的连接会被断开，导致应用程序出现短暂连接中断（闪断）。其他选项如升级配置、版本或回滚操作属于用户主动行为或计划维护，并非实例自身故障。主库故障属于RDS实例内部问"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 459,
+    "reason": "缺少官方解析",
+    "preview": "459.由于RDS只读实例的数据均由源数据库实例同步而来，以下那些功能只读实例可以使用？ A.独立的白名单配置 B.备份设置以及临时备份功能 C.创建、删除数据库 D.账号授权以及修改账号密码 答案:A AI解析:阿里云RDS只读实例的数据同步自主实例，其功能权限存在限制。根据阿里云官方文档，只读实例支持独立的白名单配置（允许设置不同的IP访问规则），而备份、数据库创建/删除、账号权限管理等操作均由主实例控制。选项A符合文档描述，其他选项涉及主实例管理权限，不属于只读实例的功"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 464,
+    "reason": "缺少官方解析",
+    "preview": "464.下列关于RDS性能的指标说话错误的是？ A.IOPS表示每秒磁盘读写（IO）次数，读写操作包括：数据从磁盘读到内存，或从内存写入磁盘 B.不同RDS实例之间可以资源共享 C.QPS表示每秒SQL语句执行次数 D.后台管理员通过top或ps命令可以查看实例的CPU利用率 答案:B AI解析:RDS实例的资源隔离机制是云数据库的基础设计原则，确保每个实例拥有独立的计算、存储和网络资源。AWS RDS文档明确说明不同实例之间资源相互独立，无法共享。选项B的描述违背了这一原则"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 465,
+    "reason": "缺少官方解析",
+    "preview": "465.下列关于RDS可用区的说法正确的是() A.RDS单可用区轻松实现了同城容灾 B.RDS不支持多可用区 C.RDS多可用区实现了ECS和RDS间的网络延迟更小 D.RDS支持跨可用区迁移 答案:D AI解析:阿里云RDS可用区相关特性中，多可用区部署用于提升容灾能力，单可用区不具备跨可用区冗余。官方文档明确RDS支持主备实例跨可用区部署及可用区迁移功能。选项A错误，单可用区无法实现同城容灾；B错误，RDS支持多可用区；C错误，多可用区目的为容灾而非降低延迟；D正确，实"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 467,
+    "reason": "缺少官方解析",
+    "preview": "467.通过DMS管理后台或者数据库客户端，连接RDS数据库时，提示错误信息\"max_user_connections\"，代表什么含义？ A.IOPS超出极限 B.RDS空间满了 C.网络中断 D.RDS数据库的连接数满了 答案:D AI解析:该错误表明RDS实例已达到最大并发连接数限制，由数据库参数max_connections控制。当应用请求的连接数超过该阈值时，新连接将被拒绝并触发此提示，而IOPS超限、存储空间耗尽或网络故障会表现为其他类型错误，与连接数无关。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 470,
+    "reason": "缺少官方解析",
+    "preview": "470.关于RDS数据转移功能，描述最准确的是 A.支持实例间复制数据库 B.数据备份文件可以从控制台下载 C.支持云外mysql数据库的迁入 D.以上功能都支持 答案:D AI解析:RDS的数据转移功能涉及多种场景。官方文档指出，RDS支持实例之间的数据库复制，可通过特定工具或功能实现。控制台提供了备份文件下载选项，用户可直接操作。对于外部MySQL数据库迁移，RDS提供了专门的迁移工具或服务，兼容不同环境下的数据源。依据阿里云RDS产品说明，三种情况均被覆盖，明确各选项对"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 471,
+    "reason": "缺少官方解析",
+    "preview": "471.关于RDS数据迁移，错误的是 A.ECS上自建的MySQL可以导入至RDS B.用户可以通过mysqldump进行分批导入 C.用在其他IDC的MySQL数据库也可以导入至RDS D.保存在OSS里的图片文件也可以直接导入RDS 答案:D AI解析:RDS数据迁移涉及不同环境下数据库的导入导出操作。阿里云文档指出，ECS自建MySQL、其他IDC的MySQL均可通过工具或服务迁移至RDS，mysqldump支持分批导入。OSS存储的图片文件无法直接导入RDS，RDS处"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 474,
+    "reason": "缺少官方解析",
+    "preview": "474.RDS for MySQL监听的端口是多少 A.3306端口 B.8080端口 C.3600端口 D.3060端口 答案:A AI解析:MySQL数据库服务的默认网络端口号为3306。AWS RDS、阿里云等云数据库服务在创建MySQL实例时通常沿用这一默认设置。选项B的8080端口常用于HTTP代理或Web应用服务器；选项C的3600与选项D的3060并非标准数据库服务端口。参考MySQL官方文档网络配置部分及主流云服务商说明文档。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 477,
+    "reason": "缺少官方解析",
+    "preview": "477.DRDS的服务可用性不低于百分之多少？ A.95 B.99.95 C.99.99 D.99 答案:B AI解析:该题考察对阿里云分布式关系型数据库服务（DRDS）服务等级协议（SLA）的理解。阿里云官网公布的DRDS服务可用性SLA明确指出，\"DRDS实例的可用性不低于99.95%\"。选项B与官方数据完全吻合，属于标准服务承诺。选项A、D的数值未达到云数据库产品的通用SLA标准，选项C属于更高可用性级别（如金融云产品）的数值。参考《阿里云产品服务等级协议》2023版第"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 702,
+    "reason": "缺少官方解析",
+    "preview": "702.RDS对SQL server有哪些限制？ A.只能在用户数据库内建立对象，不可再master、msdb、tempdb、model等系统数据库中建立用户对象 B.不可更改或销毁SQL serverMirror镜像 C.用户不可再SQLserver中指定备份计划，可在RDS管理后台进行相应操作 D.暂时不支持分布式事务(DTC) 答案:ABCD AI解析:RDS SQL Server的核心管控机制体现在数据库权限与功能限制：系统数据库（master/msdb/tempdb"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 716,
+    "reason": "缺少官方解析",
+    "preview": "716.以下哪些功能是RDS服务天生就具备的？ A.自动备份，支持15天内任意时刻数据恢复 B.数据库主辅备份 C.数据库安全漏洞实时修复 D.后台有专业团队提供运维服务 答案:BCD AI解析:RDS（云数据库服务）作为托管型数据库解决方案，其核心设计目标包括高可用、安全性和运维简化。根据官方文档，主辅备份（B）通过主从架构实现数据冗余与故障切换，确保高可用性；安全漏洞修复（C）依托服务提供商对底层系统及数据库引擎的统一维护，漏洞补丁会自动应用，用户无需手动干预；专业团队运"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 719,
+    "reason": "缺少官方解析",
+    "preview": "719.关于ADS和DMS功能，说法正确的有？ A.可以进行用户和权限管理 B.可以导入数据 C.可以进行DB容量管理 D.可以查看性能报告 答案:ABCD AI解析:ADS（分析型数据库）和DMS（数据管理服务）均为阿里云产品。根据官方功能定义：A选项对应DMS的账号权限体系管理能力；B选项对应DMS数据导入/导出模块；C选项涉及DMS的实例管理模块中的存储监控功能；D选项关联DMS实例监控中的性能指标分析功能。参考《阿里云DMS产品文档》功能模块划分，ABCD均属于标准功"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 723,
+    "reason": "缺少官方解析",
+    "preview": "723.RDS FOR MySQL的高可用架构包括哪些功能？ A.同城容灾 B.异地容灾 C.防DDos攻击 D.主备架构 答案:ABD AI解析:RDS FOR MySQL的高可用架构主要涉及冗余设计及容灾能力。阿里云官方文档指出，其高可用版通常采用主备架构（D），主节点和备节点位于不同服务器，保障故障自动切换。同城容灾（A）通过多可用区部署实现，备节点与主节点分属同地域不同可用区。异地容灾（B）则依赖跨地域的灾备实例或数据备份，支持手动将数据恢复至其他地域。防DDos攻击"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 734,
+    "reason": "缺少官方解析",
+    "preview": "734.在RDS实例下创建数据库的方法有哪些？ A.直接调用RDS的openAPI B.通过My SQL客户端工具，如:My SQL-Front C.通过管理控制台完成 D.阿里云命令行工具CLI 答案:AC AI解析:RDS实例创建数据库的主要方法包括使用管理控制台和调用OpenAPI。阿里云官方文档指出，管理控制台提供图形界面操作，用户可通过控制台直接创建数据库。OpenAPI允许开发者以编程方式管理RDS资源，包括数据库创建。MySQL客户端工具（如MySQL-Fron"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 742,
+    "reason": "缺少官方解析",
+    "preview": "742.在RDS只读实例变更配置过程中，RDS主实例无法进行哪些任务？ A.查看SQL审计日志 B.内外网切换 C.备份实例 D.创建实例 答案:BCD AI解析:阿里云RDS只读实例变更配置期间，主实例的部分管理操作会被限制。内外网切换（B）涉及网络中断或调整，影响主实例和只读实例的连接；备份实例（C）需要稳定状态避免数据不一致；创建实例（D）可能涉及资源争用或配置冲突。查看SQL审计日志（A）属于读取操作，不影响实例状态。参考阿里云RDS文档中的实例管理限制说明。答案BC"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 744,
+    "reason": "缺少官方解析",
+    "preview": "744.RDS的基本功能有哪些？ A.实例管理 B.账号管理 C.安全组管理 D.数据库管理 答案:ABD AI解析:AWS RDS（Relational Database Service）主要提供托管式数据库服务，其核心功能涵盖实例的创建、配置、监控及维护。根据AWS官方文档，实例管理（A）涉及实例的启动、停止、修改规格等操作；账号管理（B）用于设置数据库访问权限及用户角色；数据库管理（D）包括库内数据库的创建、删除及参数调整。安全组管理（C）属于VPC网络层控制，由EC2"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 750,
+    "reason": "缺少官方解析",
+    "preview": "750.RDS关系型数据库服务支持如下哪些数据库。 A.SQLServer B.oracle C.My SQL D.access 答案:AC AI解析:RDS关系型数据库服务的核心支持引擎包括MySQL、SQL Server、PostgreSQL等，其中PPAS引擎通过兼容性实现类Oracle功能但非原厂数据库。Access作为桌面级数据库未被主流云服务纳入支持范围，故正确选项为MySQL（C）和SQL Server（A）。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 795,
+    "reason": "缺少官方解析",
+    "preview": "795.云数据库(RDS)具有以下哪些优势？ A.高可用性，采用主从热备的架构 B.易用性，控制台自助迁移和管理 C.高安全性，具有网路防护能力和SQL审计 D.高性能，底层使用高端服务器 答案:ABCD AI解析:云数据库（RDS）的主从热备架构通过实时数据同步和自动故障切换实现服务连续性，符合高可用性定义。控制台提供可视化操作界面及API支持，用户可自主完成备份、扩缩容等任务，体现易用性设计。网络防护如VPC隔离、IP白名单及防火墙规则，配合SQL操作日志记录与审计功能，"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 796,
+    "reason": "缺少官方解析",
+    "preview": "796.由于RDS只读实例的数据均有源数据库同步而来，以下哪些功能只读实例将无法使用？ A.账号授权及修改账号密码 B.备份设置及临时备份功能 C.创建\\/删除数据库 D.独立的白名单配置 答案:ABC AI解析:RDS只读实例的数据通过主实例同步，但部分管理功能受限。阿里云文档指出，只读实例不支持账户管理操作（如授权、修改密码），此类操作只能在主实例执行。备份功能依赖主实例的数据文件，只读实例无法独立配置备份策略或触发备份任务。数据库的创建或删除涉及数据结构的变更，只能在主"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 799,
+    "reason": "缺少官方解析",
+    "preview": "799.下面那些是RDS提供的系统性能监控项目？ A.IOPS B.网络流量 C.TPS D.CPU利用率 答案:ABCD AI解析:IOPS（A）是衡量存储设备每秒处理读写操作次数的指标，属于RDS基础监控项。网络流量（B）包括实例的入站和出站流量，用于监测网络带宽使用情况。TPS（C）指每秒事务数，反映数据库处理事务的能力。CPU利用率（D）直接体现实例计算资源的使用状况。AWS官方文档中明确列出这些指标作为RDS监控的核心组成部分。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "originalNumber": 806,
+    "reason": "缺少官方解析",
+    "preview": "806.当RDS实例所占用的磁盘容量超过了所购买的最大磁盘容量时，RDS实例会被系统锁定。实例锁定后，用户只有以下哪些权限？ A.select B.drop C.show D.insert 答案:ABC AI解析:阿里云RDS实例在磁盘空间超过限制后进入锁定状态，此时实例仅支持特定的只读操作。根据官方文档，锁定期间用户可执行数据查询及部分元数据查看命令。选项A（select）允许读取数据，C（show）用于查看数据库结构信息，符合只读模式下的可用权限。选项B（drop）涉及删"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 53,
+    "reason": "缺少官方解析",
+    "preview": "53.云盾DDoS基础防护功能如何开启？ A.提交工单，24小时之内开通 B.自动开通 C.联系客户经理线下开通 D.需要从管理控制台申请开通 答案:B AI解析:云盾DDoS基础防护功能基于阿里云服务默认开通机制，用户在创建ECS实例时系统自动免费启用该功能，无需手动申请或工单处理。其核心逻辑在于阿里云将基础网络安全防护（含DDoS攻击防御）内嵌至云服务器底层架构，通过资源绑定方式实现即开即用，体现平台对基础安全能力的标准化集成。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 99,
+    "reason": "缺少官方解析",
+    "preview": "99.OTS python Cu工具需要哪个版本的python支持（ ） A.2.3版 B.2.7版 C.2.6版 D.3.0版 答案:B AI解析:该题考查OTS工具对Python版本的依赖特性。Python 2.7作为2.x系列的最终维护版本，其语法结构和标准库支持与后续3.x版本存在显著差异。OTS工具基于Python 2.7开发，依赖该版本特有的编码规范及第三方模块，而3.0版本因核心语法重构导致兼容性中断，因此需使用2.7版支持。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 128,
+    "reason": "题干为空",
+    "preview": "128.A、B两位运动员进行打靶练习，两人分别记录下各自的成绩，A的成绩为：98,97,96,95,94,91, B的成绩为：99,96,96,95,95,95,90,95。以下说法中正确的是________。 A.A、B两人进行的练习次数不同无法比较稳定性 B.B的成绩更稳定 C.B的平均成绩更好 D.A、B两人逬行的练习次数不同无法比较平均成绩 答案:A 解析:成绩的稳定性不能依靠平均值计算，平均值只能放映运动员的平均水平，不能反应稳定性。A的平均成绩：(98+97+96"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 269,
+    "reason": "缺少 AI 解析",
+    "preview": "269.您拥有香港地域可用区A、华北1（青岛）地域可用区B和华南1（深圳）可用区B的云服务器ECS实例，现在希望通过购买新的块存储挂载到已有的云服务器ECS实例上进行磁盘空间的扩容，肯定不能购买________可用区的块存储。 A.华北1（青岛）地域可用区A B.华北1（青岛）地域可用区B C.香港地域可用区A D.华南1（深圳）地域可用区B 答案:A 解析:一块云盘只能挂载到同一地域、同一可用区的一台ECS实例。https://help.aliyun.com/documen"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 319,
+    "reason": "缺少官方解析",
+    "preview": "319.ADS存储数据的时候采用的模型是哪种？ A.雪花型模型 B.关系型模型 C.星型模型 D.多维模型 答案:B AI解析:阿里云AnalyticDB（ADS）是一款分布式分析型数据库，支持标准SQL语法及事务处理能力，其数据存储基于表结构设计，符合关系型数据库范式。官方文档指出，ADS兼容MySQL协议，数据模型采用二维表格形式组织，通过行、列关系进行数据管理。雪花模型与星型模型属于维度建模，适用于传统数据仓库场景；多维模型多用于OLAP立方体结构。ADS底层虽为列式存"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 326,
+    "reason": "缺少官方解析",
+    "preview": "326.某公司属于传统行业，一年前刚刚发展互联网线上业务，用了5台ECS，没有专门的系统管理员，最近半年来上线系统总是出现各种安全问题，几次高危漏洞被黑客利用，差点将核心数据泄露。为此公司的CEO王总非常着急，决定向阿里云求助，请你为王总推荐一款合适的安全产品和服务，快速解决服务器的运维之痛。 A.服务器安全托管 B.DDoS高防IP C.阿里绿网 D.安全网络 答案:A AI解析:本题聚焦企业安全运维能力缺失场景，正确答案需满足自动化安全管理需求。核心知识点在于阿里云服务器"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 334,
+    "reason": "缺少官方解析",
+    "preview": "334.通过DMS（）管理其他阿里云帐号下的RDS实例？ A.只要有数据库帐号即可管理 B.通过DMS\"实例授权\"功能授权后即可管理 C.完全不可以 D.通过RAM授权后才能管理 答案:B AI解析:DMS支持跨阿里云账号管理RDS实例，主要使用\"实例授权\"功能实现。阿里云官方文档明确指出，主账号可通过DMS控制台的\"实例授权\"功能，将RDS实例权限授予其他账号，被授权账号登录DMS后即可操作对应实例。选项A仅依赖数据库账号，未涉及跨账号权限问题；选项C完全否定，与功能设计矛"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 342,
+    "reason": "缺少官方解析",
+    "preview": "342.OTS是构建在阿里飞天系统之上的产品，它提供的是什么服务？ A.在线高并发事务服务 B.海量数据的非结构化读写服务 C.在线NoSQL数据库服务 D.在线关系型数据库服务 答案:C AI解析:OTS属于阿里云提供的数据库服务类型，阿里云官方文档指出，Table Store（原OTS）是基于飞天分布式系统的NoSQL多模型数据库。选项A强调事务处理，与OTS的高并发读写特性部分相关，但非核心服务类型。选项B中的非结构化数据对应对象存储服务OSS。选项D的关系型数据库服务"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 346,
+    "reason": "缺少官方解析",
+    "preview": "346.云盾加密服务采用了什么机制来保证秘钥的安全？ A.防篡改硬件密码机 B.符合国家密码管理局要求的算法 C.符合银监会对秘钥强度的要求 D.支持国际通用密码算法 答案:B AI解析:云盾加密服务在密钥安全管理中，核心机制在于遵循国家密码管理局制定的密码算法标准。国家密码管理局发布的《商用密码管理条例》明确规定，使用符合国家标准的密码算法是保障密钥安全的基本要求。选项B直接对应这一规定，其他选项虽涉及不同安全层面或行业标准，但未直接体现国家密码管理合规性这一核心机制。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 351,
+    "reason": "缺少官方解析",
+    "preview": "351.OTS单个分片下所有行的大小总和不能超过多大。 A.无限制 B.1G C.1M D.1T 答案:B AI解析:该题考查分布式数据存储中分片大小的核心限制规则。根据MaxCompute（原ODPS）系统设计规范，单个分片的数据容量存在明确上限约束，所有行数据总和不可超过1G，这一限制旨在平衡数据分片处理的效率与系统稳定性，避免单分片过大导致性能瓶颈。选项B符合此技术参数。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 353,
+    "reason": "缺少官方解析",
+    "preview": "353.关于DDos高防lP的功能，描述错误的是？ A.提供实时精准的流量报表及攻击详情，让你及时准确获得当前服务详情 B.防护多种DDOS类型攻击，包括但不限于以下攻击类型ICMP Flood，UDP Flood、TCP Flood、SYN Flood、ACK Flood等 C.DDOS防护阀值弹性调整，你可以随时升级更高级的防护，调整过程服务中断时间小于等于30秒 D.可随时更换防护IP 答案:C AI解析:DDoS高防IP的主要功能包括流量监控、多类型攻击防护、弹性防护"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 355,
+    "reason": "缺少官方解析",
+    "preview": "355.某用户担心突发大流星DDOS攻击超过\"DDOS基础防护\"的上限影响网站访问，可以选择开通哪个云盾服务，用较低的成本扩大N倍的防护能力？ A.安全网络专家服务 B.安全网络 C.阿里绿网 D.DDOS高防IP 答案:D AI解析:这道题目考查对阿里云安全防护服务的应用理解。阿里云官方文档指出，DDoS高防IP服务专为抵御大流量DDoS攻击设计，通过提供更高的防护带宽和流量清洗能力，帮助用户应对超过基础防护阈值的大规模攻击场景。选项D对应的服务通过代理方式隐藏真实服务器I"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 357,
+    "reason": "缺少官方解析",
+    "preview": "357.某企业需要一个能够从身份证号中分析得出所属省份的自定义函数，哪种自定义函数适用于这种场景？ A.User Defined Splitted Function(用户自定义分组函数) B.User Defined Scalar Function(用户自定义标量函数) C.User Defined Table Valued Function(用户自定义表值函数) D.User Defined Aggregation Function(用户自定义聚组函数) 答案:B AI解析"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 368,
+    "reason": "缺少官方解析",
+    "preview": "368.有关DDoS攻击的描述，最准确的是？ A.主要是攻击目标是数据库 B.黑客自己够买了大量服务器，专门从事破坏活动 C.攻击的目的是让服务超负载，然后窃取机密信息 D.攻击的主要目的是让指定目标无法提供正常服务，甚至从互联网上消失，是目前最强大、最难防御的攻击之一 答案:D AI解析:DDoS（分布式拒绝服务攻击）核心特征是攻击者通过控制多台被感染的设备构成僵尸网络，向目标发送海量请求，耗尽服务器资源，使其无法响应合法用户。此类攻击不直接针对数据窃取，而是破坏服务可用性"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 373,
+    "reason": "缺少官方解析",
+    "preview": "373.关于OTS中数据查询的说法正确的是？ A.查询时仅需要提供分片键即可 B.可以创建索引，然后基于索引列进行查询 C.查询时可以仅提供主键的一部分，但是和组成主键的列的顺序有关 D.单行查询必须提供主键 答案:D AI解析:OTS中的单行查询操作要求必须指定完整主键。官方文档明确指出，主键用于唯一标识表中的每一行，若缺少主键的任何部分，系统无法准确定位数据。选项A错误，分片键（分区键）仅是主键的一部分，单独不足以执行查询；选项B提到的索引属于二级索引功能，非单行查询必要"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 438,
+    "reason": "缺少官方解析",
+    "preview": "438.阿里云Elashcsearch为运行中的集群提供了多项基础被监控指标（例如集群状态，集群查询QPS、节点CPU使用率、节点磁盘使用率等）和高级监控报警指标 （例如Cluster、 Index、Note Resource等)，用来检测集群的运行状况。关于 Elashcsearch集群监控描述正确的是哪个？ A.Elashcsearch集群监控，既可以通过传统的DSL来完成查看，也可以通过GUI页面来直观分析 B.Elashcsearch集群监控既不可以通过传统的DSL来"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 441,
+    "reason": "缺少官方解析",
+    "preview": "441.实时计算整体开发流程包含准备工作和作业选择两部分，下列哪个选项是准备工作的开发流程？ A.作业开发 B.搭建上下游存储 C.作业调试 D.作业运维 答案:B AI解析:实时计算整体开发流程通常分为准备阶段和实施阶段。准备阶段主要涉及环境配置与资源搭建。实时计算系统需要依赖外部数据源和输出存储，如消息队列、数据库等，这些上下游存储的配置属于基础设施准备工作。作业开发、调试、运维等步骤均在存储环境就绪后进行。选项B对应基础设施搭建步骤，与其他选项相比更符合准备工作定位。部"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 447,
+    "reason": "缺少官方解析",
+    "preview": "447.通过REST API查询Elasticsearch文档时，通过（）语法将用户输入关键词发送给Elasticsearch。 A.query_string B.query C.post_date D.aggs 答案:A AI解析:在Elasticsearch的REST API中，查询请求体通常使用`query`参数包裹具体查询类型。`query_string`是用于解析用户输入的关键词，支持Lucene语法，允许灵活搜索。例如文档中的查询示例明确将关键词嵌入`query_"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 450,
+    "reason": "缺少官方解析",
+    "preview": "450.使用Elasticsearch DSL删除语法可以对数据进行删除，下列关于Elasticsearch删除数据语法描述正确的事哪个？ A.在Elasticsearch中仅支持删除指定ID对应的document索引数据 B.在Elasticsearch中既可以删除指定ID对应的document索引数据，也可以删除整个索引库 C.在Elasticsearch中仅支持索引库删除整个 D.DROP请求删除指定主键的文档 答案:B AI解析:Elasticsearch提供了多种数"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 452,
+    "reason": "缺少官方解析",
+    "preview": "452.对于以下 Indexing service 构建索引流程 1.调用bulk api 完成索引批量写入SLB 2. Indexing service 在回过来到Data 节点构建对应的segment 文件块 3. 当用户构建索引的请求，通过Coordinating 协调节点，将索引的元数据index metadata 发送至Indexing service 的SLB 排序正确的是哪个？ A.123 B.312 C.132 D.321 答案:A AI解析:Indexing"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 453,
+    "reason": "缺少官方解析",
+    "preview": "453.当使用Elasticsearch集群监控界面查看集群各基点CPU时发现，长时间处于高位，则下列描述正确的是哪个？ A.磁盘性能不高，IO压力大，造成程序阻塞 B.CPU处于长时间，高强度的运算过程中，可能存在满查询，大型计算程序，造成CPU高负荷运转 C.可能为内存异常情况，比如OOM、内存泄露等等 D.磁盘有磁道损坏情况或磁盘容量不足，造成CPU计算缓慢 答案:A AI解析:Elasticsearch集群监控中，CPU长时间处于高位常见原因分析。官方文档指出，高CP"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 460,
+    "reason": "缺少官方解析",
+    "preview": "460.用户A是公司的系统管理员，经常去上海出差，每当他在上海远程登录服务器时系统就会发出报警信息，提示\"有人异地登录，请注意服务器安全\"，有什么方法可以快速、自动解决这个问题？ A.登录阿里云管理控制台，在安骑士配置项里添加\"常用登录地点\" B.向我的朋友电话求助，他是业界有名的黑客高手 C.向公司领导请求帮助 D.立即提交工单，咨询阿里云工程师 答案:A AI解析:阿里云安骑士（现为云安全中心）提供安全基线功能，支持自定义配置。针对异地登录告警，用户可通过管理控制台设置信"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 462,
+    "reason": "缺少官方解析",
+    "preview": "462.下面哪个特性属于多可用区RDS的？ A.轻松实现同城容灾 B.将RDS的存储空间扩大2倍 C.有效控制云产品间的网络延迟 D.是为了防止DDoS攻击 答案:A AI解析:多可用区RDS通过在不同可用区部署实例副本，自动处理故障转移，确保数据库高可用性。同城容灾指在同一地域的不同可用区之间建立容灾能力，以应对机房级故障。阿里云、AWS等云服务商相关文档均指出多可用区部署主要服务于容灾场景。选项B涉及存储扩容，与多可用区无关；选项C的网络延迟控制通常依赖地域部署而非多可用"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 463,
+    "reason": "缺少官方解析",
+    "preview": "463.下面关于冷热数据的说法，错误的是() A.在同一张表可以对不同的分片设置不同的预留读写吞吐量，对于冷数据所在的片，设置较低的预留读写吞吐量 B.可以用不同的表来区分冷热数据，并设置不同的预留读写吞吐量 C.表中存在大量冷数据会导致数据访问压力不均匀，从而导致表上配置的预留读写吞吐量无法被充分利用 D.对冷数据对应的表，可以设置较小的预留读写吞吐量 答案:A AI解析:预留读写吞吐量的设置通常作用于表级别，而非分片级别。同一张表中的不同分片共享相同的配置，无法独立调整。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 486,
+    "reason": "缺少官方解析",
+    "preview": "486.关于DDOS高防IP的功能，描述错误的是？ A.提供实时精准的流量报表及攻击详情，让你及时准确获得当前服务详情 B.防护多种DDOS类型攻击，包括但不限于以下攻击类型ICMP C.DDOS防护阀值弹性调整，你可以随时升级更高级的防护，调整过程服务中断时间小于等于30秒 D.可随时更换防护IP 答案:C AI解析:DDOS高防IP的核心功能包括流量监控、攻击防护、弹性扩展及灵活配置。参考主流云服务商（如阿里云、腾讯云）的高防IP文档，防护阈值调整通常通过后台资源动态扩展"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 491,
+    "reason": "缺少官方解析",
+    "preview": "491.某用户担心突发大流量DDOS攻击超过DDOS基础防护的上限影响网站访问，可以选择开通哪个云盾服务，用较低的成本扩大N倍的防护能力? A.安全网络专家服务 B.安全网络 C.阿里绿网 D.DDOS高防IP 答案:D AI解析:《阿里云产品文档》中，DDOS高防IP服务主要针对大流量攻击场景，通过隐藏用户真实IP，将攻击流量引流至防护节点清洗，支持弹性扩展防护带宽。选项D在功能上直接对应题目中用户对突发大流量防护的需求，相较于其他选项（安全网络专家服务侧重人工支持、安全网"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 527,
+    "reason": "缺少官方解析",
+    "preview": "527.在管理控制台的云盾配置页里可以设置哪些\"报警方式\"?通过这些方式，用户可以在出现风险的第一时刻收到事件通知。 A.钉钉消息 B.实时电话 C.手机短信 D.电子邮箱 答案:ABCD AI解析:阿里云云盾支持多种风险事件报警通知方式。参考阿里云官方文档，云盾配置允许用户设置钉钉群机器人接收告警信息（A），紧急情况下可触发自动外呼电话提醒（B），默认绑定手机号接收短信通知（C），以及使用注册邮箱获取告警邮件（D）。四个选项均在云盾控制台的通知设置中有明确对应的配置入口。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 536,
+    "reason": "缺少官方解析",
+    "preview": "536.OTS费用从哪几个维度计量? A.数据存储 B.预留读写吞吐量 C.外网下行流量 D.数据访问次数(万次) 答案:ABC AI解析:OTS费用计量维度参考阿里云表格存储（Tablestore）定价策略。数据存储按实际占用空间计费；预留读写吞吐量根据预先配置的资源收费，与实际使用无关；外网下行流量针对从OTS下载到公网的数据计费。数据访问次数（万次）不作为独立计费项，实际费用由读写吞吐量（按CU计算）覆盖。阿里云官方文档明确列出存储、预留吞吐量及外网流量为计费维度。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 643,
+    "reason": "缺少官方解析",
+    "preview": "643.下面关于角色管理描述正确的是（ ） A.角色是一组访问权限的集合,admin为缺省角色 B.相比Owner，Admin不能将Admin角色赋给别的用户，不能设定项目空间的安全配置，不能修改项目空间的鉴权模型。 C.角色的限制中，Admin角色的权限不能被修改 D.没有被使用的角色才可以被删除 答案:ABCD AI解析:角色管理涉及权限集合与系统预设规则。A项指出角色为权限集合，admin为默认角色，符合常见系统的预设角色定义。B项对比Admin与Owner权限，Adm"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 645,
+    "reason": "缺少官方解析",
+    "preview": "645.在用户和角色中，多组数据安全体系，主要有哪些方面采取措施（） A.用户认证 B.项目空间的用户与授权管理 C.跨项目空间的资源共享 D.项目空间的数据保护 答案:ABCD AI解析:用户认证是确保访问者身份合法性的基本手段。项目空间的用户与授权管理涉及权限分配和细粒度控制。跨项目空间的资源共享需要建立安全策略以防止越权访问。项目空间的数据保护涵盖存储、传输过程中的安全技术措施。这四个方面共同构成多组数据安全体系的核心要素，相关措施在数据安全框架标准（如ISO/IEC "
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 660,
+    "reason": "缺少官方解析",
+    "preview": "660.dataworks开发对象关系图包含以下哪些选项（） A.任务开发 B.脚本开发 C.函数和资源 D.以上都不是 答案:ABC AI解析:DataWorks开发对象关系图聚焦数据开发核心模块，涵盖任务开发（业务流程节点编排）、脚本开发（SQL/Python等代码层操作）、函数与资源（UDF扩展及文件依赖管理）三大基础组件，三者共同构建数据开发体系的技术支撑框架。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 704,
+    "reason": "缺少官方解析",
+    "preview": "704.OPDS中用户认证(Authentication)的主要功能是检查请求(Request)发送者的真实身份，通过包括以下哪几项验证？ A.正确验证用户状态，包括是否欠费等 B.正确验证接收到的信息在途中是否被篡改 C.正确验证消息发送方的真实身份 D.用户需要提取用户个性化信息时进行用户个性化认证 答案:ABC AI解析:OPDS（开放出版物分发系统）用户认证功能涉及确认请求发送者身份的真实性。根据RFC 7235（HTTP/1.1认证）及相关标准，身份验证通常包含三个"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 710,
+    "reason": "缺少官方解析",
+    "preview": "710.OTS写操作具有以下特性: A.原子性 B.强一致性 C.最终—致性 D.事务—致性 答案:AB AI解析:OTS写操作特性涉及分布式存储系统的设计原则。参考阿里云表格存储（OTS）官方文档，其写入模型支持原子性（Atomicity），确保单个分区内多个数据操作的原子执行；同时提供强一致性（Strong Consistency），写入成功后后续读取立即反映最新结果。选项C最终一致性描述的是不同场景下的数据同步模型，D事务一致性通常关联ACID属性中的逻辑一致性，而非O"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 717,
+    "reason": "缺少官方解析",
+    "preview": "717.为了保证应用获得可预期的性能，需要设置OTS表的（）？ A.预留处理内存 B.预留读吞吐量 C.预留存储空间 D.预留写吞吐量 答案:BD AI解析:OTS是表格存储中的一种实例类型，主要用于处理高并发请求。阿里云官方文档指出，预留读吞吐量和预留写吞吐量是配置OTS表时必须指定的参数，用于预先分配资源以确保应用在负载高峰期的性能稳定性。预留存储空间（A）属于容量型实例的配置项，预留处理内存（B）并非OTS表的显式配置参数。吞吐量预留机制直接决定了每秒可处理的数据请求量"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 730,
+    "reason": "缺少官方解析",
+    "preview": "730.云盾先知计划包括以下哪些功能？ A.漏洞收集 B.审核漏洞 C.自主设定奖励计划 D.协助漏洞修复 答案:ABCD AI解析:云盾先知计划是阿里云推出的安全众测平台，主要面向企业客户提供漏洞风险发现与处置服务。该计划允许企业通过授权白帽子社区进行漏洞探测，其功能模块涉及多方协作流程。根据阿里云官方产品文档描述，该计划包含漏洞提交入口、专业团队对漏洞有效性评估、客户可自定义漏洞激励策略，以及提供漏洞修复建议等全链路服务。选项A对应漏洞信息汇总机制，B对应漏洞验证环节，C"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 745,
+    "reason": "缺少官方解析",
+    "preview": "745.以下哪些情况不适合使用Maxcompute mapjoin。 A.or连接关联条件 B.关联表中有临时表 C.两个表无条件关联 D.两个大表关联 答案:BCD AI解析:MaxCompute MapJoin通常适用于小表和大表关联的场景，小表需足够小以完全载入内存。MapJoin不支持全连接或笛卡尔积（无条件关联），同时要求关联条件为等值连接。若关联表中存在临时表，可能因数据未持久化或统计信息缺失导致无法使用MapJoin。两个大表关联时，内存无法容纳任一表数据，无法"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 779,
+    "reason": "缺少官方解析",
+    "preview": "779.数据仓库的两大模式分为范式建模法和维度建模法。以下属于维度建模法的是？ A.雪花模型 B.星座模型 C.E-R模型 D.星型模型 答案:ABD AI解析:维度建模法主要关注如何以业务过程为中心组织数据，便于快速查询和分析。该理论由Ralph Kimball提出，详细阐述于《The Data Warehouse Toolkit》。雪花模型（A）在星型模型基础上对维度表进行规范化处理，仍属于维度建模范畴。星座模型（B）指多个事实表共享维度表的场景，常见于复杂业务分析。星型"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 786,
+    "reason": "缺少官方解析",
+    "preview": "786.在企业协同开发场景中，合理的授权既能够保障数安全，也能保证数据生产环境的稳定，平台预设了哪些角色供管理者进行权限分配？ A.部署角色、运维角色 B.开发角色、模型设计师 C.安全管理员、空间管理员 D.风险管理员、运维管理员 答案:ABCD AI解析:在企业协同开发环境中，权限分配需兼顾数据安全和生产环境稳定。协同平台通常基于最小权限原则设计角色体系，参考了RBAC（基于角色的访问控制）模型以及主流开发运维平台（如GitLab、Azure DevOps）的权限实践。A"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 787,
+    "reason": "缺少官方解析",
+    "preview": "787.Apache Spark Streaming是Spark核心API的一个扩展，可以实现高吞吐量的、具有容错机制的实时流数据处理。下列哪项描述是与Flink相比独有的特性？ A.具有checkpoint机制 B.使用 micro-batching方式进行数据处理 C.无缝内嵌其他spark模块 D.既可以进行流处理，也可以进行批处理 答案:BC AI解析:Apache官网文档对比显示，Spark Streaming采用micro-batching架构，将实时数据流划分为"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 788,
+    "reason": "缺少官方解析",
+    "preview": "788.通过GUI页面来直观查看Elasticsearch 集群监控授权，应用授权应选择的选项有哪些？ A.通过DSL来查看 B.获取登录用户的基本信息（默认授权域） C.阿里云颁发的唯一用户标志符 D.用户的名称等个人信息 答案:ABCD AI解析:根据Elasticsearch应用授权机制，GUI监控功能通常需要多维度权限验证。A选项涉及查询数据权限，DSL作为底层查询语言，部分监控指标可能依赖DSL生成。B、C、D选项属于身份认证范畴，阿里云场景下默认授权域默认包含用户"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 801,
+    "reason": "缺少官方解析",
+    "preview": "801.系统已经默认预置了8种监控类型，包括http监控、ping监控、tcp监控、udp监控、DNS监控、pop监控、smtp监控、ftp监控，其中每种监控类型里面包含了两个监控项，分别是()和() A.响应内容长度：length B.请求时间：requestime C.状态码：status D.响应时间：responsetime 答案:CD AI解析:根据题目描述，系统预置了多种监控类型，每种监控类型包含两个监控项。我们需要确定这两个监控项是什么。首先，我们来看选项A和B"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 811,
+    "reason": "缺少官方解析",
+    "preview": "811.阿里云流计算可以用于下列哪些应用场景中？ A.实时数据仓库 B.实时报表 C.实时监控 D.离线数据仓库 答案:ABC AI解析:阿里云流计算适用于实时数据处理场景，官方文档指出其支持实时数据仓库（实时ETL、数据清洗）、实时报表（动态更新业务指标）、实时监控（日志分析、异常检测）。对于离线数据仓库，流计算可将处理后的结果数据存储至离线系统（如MaxCompute）供后续分析，实现实时与离线协同。各选项均符合应用范围。"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 818,
+    "reason": "缺少官方解析",
+    "preview": "818.一些常见的机器学习算法(比如聚类算法K-means等) 中,会用到\"距离\"。己知平面直角坐标系中两点的坐标分别为(2,1),(5,5),以下关于两点间距离的说法中正确的有()。 A.两点的夹角余弦为0.5 B.两点间的切比雪夹距高为3 C.两点间的欧式距离为5 D.两点间的曼哈顿距离为7 答案:CD AI解析:距离度量是机器学习中的基础概念，涉及不同计算方法。对于点(2,1)和(5,5)：欧式距离通过平方差和的平方根计算得√(3²+4²)=5；曼哈顿距离采用绝对值之和"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 821,
+    "reason": "缺少官方解析",
+    "preview": "821.使用阿里云机械学习创建的项目如果不打开GPU选项，则以下功能中()等不能使用。 A.PAI-TF任务 B.深度学习组件 C.时间序列组件 D.网络分析组件 E.SQL脚本组件 答案:AB AI解析:阿里云机器学习平台（PAI）的部分功能对计算资源有特定要求。根据官方文档，PAI-TF任务（基于TensorFlow框架）和深度学习组件（如TensorFlow/PyTorch框架任务）需要GPU支持以加速模型训练。若未开启GPU选项，这两类任务无法利用GPU的并行计算能力"
+  },
+  {
+    "sourceName": "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "originalNumber": 827,
+    "reason": "缺少 AI 解析",
+    "preview": "827.云监控里的站点监控可以对目标站点服务的可用性以及响应时间进行监控。系统已经默认预置了8种监控类型，包括http监控、ping监控、tcp 监控、udp监控、DNS监控、pop 监控、smtp监控、ftp 监控，其中每种监控类型里面包含了两个监控项，分别是（）？ A.响应内容长度: length B.请求时间: requestime C.状态码：status D.请求时间: requestime 答案:CD 解析:对指定的URL/IP进行HTTP/HTTPS探测，获得可"
+  }
+]

@@ -7,7 +7,17 @@ import tsParser from '@typescript-eslint/parser';
 
 export default [
   {
-    ignores: ['dist', 'node_modules', 'public/questions.json', 'public/import_errors.json'],
+    ignores: [
+      'assets',
+      'dist',
+      'node_modules',
+      'questions.json',
+      'import_errors.json',
+      'question_meta.json',
+      'public/questions.json',
+      'public/import_errors.json',
+      'public/question_meta.json',
+    ],
   },
   js.configs.recommended,
   {

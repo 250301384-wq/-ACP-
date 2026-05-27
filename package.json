@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
+    "dev": "node scripts/withViteIndex.mjs dev",
     "parse": "node scripts/parseQuestionBank.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
-    "build": "tsc -p tsconfig.json && vite build",
+    "build": "tsc -p tsconfig.json && node scripts/withViteIndex.mjs build",
+    "pages:root": "npm run build && node scripts/syncPagesRoot.mjs",
     "preview": "vite preview --host 0.0.0.0"
   },
   "dependencies": {

@@ -12,6 +12,14 @@ npm run dev
 
 Vite 已配置 `base: '/-ACP-/'`，本地开发默认访问 `http://localhost:5173/-ACP-/`。
 
+如果 GitHub Pages 当前选择的是 `Deploy from a branch -> main / root`，请运行并提交根目录静态副本：
+
+```bash
+npm run pages:root
+```
+
+该命令会把 `dist` 中的 `index.html`、`assets/` 和题库 JSON 同步到仓库根目录，避免 GitHub Pages 直接托管 Vite 源码时出现空白页。
+
 ## 题库导入
 
 题库源文件放在 `source/` 目录：

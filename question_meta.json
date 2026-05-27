@@ -1,0 +1,15 @@
+{
+  "version": "2026-05-27",
+  "generatedAt": "2026-05-27T14:30:29.213Z",
+  "sources": [
+    "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
+    "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
+    "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
+    "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
+    "ACP大数据工程师_06_实时计算_云产品_安全专项.docx"
+  ],
+  "totalQuestions": 831,
+  "successfulQuestions": 831,
+  "failedItems": 178,
+  "expectedQuestions": 831
+}
