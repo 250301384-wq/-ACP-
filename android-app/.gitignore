@@ -1,0 +1,13 @@
+node_modules/
+android-sdk/
+jdk-21/
+.sdk-tmp/
+.jdk-tmp/
+web/
+android/.gradle/
+android/local.properties
+android/app/build/
+*.apk
+*.aab
+!dist/
+!dist/*.apk

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ACP大数据题库</string>
+    <string name="title_activity_main">ACP大数据题库</string>
+    <string name="package_name">com.acp.bigdata.questionbank</string>
+    <string name="custom_url_scheme">com.acp.bigdata.questionbank</string>
+</resources>
