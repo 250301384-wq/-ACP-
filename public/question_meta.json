@@ -1,15 +1,16 @@
 {
-  "version": "2026-05-27",
-  "generatedAt": "2026-05-27T14:30:29.213Z",
+  "version": "2026-05-31",
+  "generatedAt": "2026-05-31T12:52:45.589150Z",
   "sources": [
     "ACP大数据工程师_02_MaxCompute_ODPS专项.docx",
     "ACP大数据工程师_03_DataWorks_DataIDE_DataX专项.docx",
     "ACP大数据工程师_04_AnalyticDB_ADS_QuickBI专项.docx",
     "ACP大数据工程师_05_RDS_DRDS_数据库专项.docx",
-    "ACP大数据工程师_06_实时计算_云产品_安全专项.docx"
+    "ACP大数据工程师_06_实时计算_云产品_安全专项.docx",
+    "阿里云认证-ACP认证-大数据.pdf"
   ],
-  "totalQuestions": 831,
-  "successfulQuestions": 831,
-  "failedItems": 178,
-  "expectedQuestions": 831
+  "totalQuestions": 2021,
+  "successfulQuestions": 2021,
+  "failedItems": 1368,
+  "expectedQuestions": 2021
 }

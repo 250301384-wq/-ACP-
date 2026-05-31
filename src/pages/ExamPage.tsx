@@ -16,6 +16,7 @@ interface ExamScore {
 export function ExamPage() {
   const { message } = AntApp.useApp();
   const { questions } = useQuestionContext();
+  const answerableQuestions = useMemo(() => questions.filter((question) => question.answer.length > 0), [questions]);
   const submitAnswer = useLearningStore((state) => state.submitAnswer);
   const [count, setCount] = useState(50);
   const [minutes, setMinutes] = useState(60);
@@ -35,7 +36,7 @@ export function ExamPage() {
   );
 
   const startExam = () => {
-    const picked = shuffle(questions).slice(0, Math.min(count, questions.length));
+    const picked = shuffle(answerableQuestions).slice(0, Math.min(count, answerableQuestions.length));
     const now = Date.now();
     setExamQuestions(picked);
     setAnswers({});
@@ -109,13 +110,24 @@ export function ExamPage() {
           <div className="exam-config">
             <div>
               <Typography.Text>题量</Typography.Text>
-              <InputNumber min={5} max={Math.max(5, questions.length)} value={count} onChange={(value) => setCount(value ?? 50)} />
+              <InputNumber
+                min={5}
+                max={Math.max(5, answerableQuestions.length)}
+                value={count}
+                onChange={(value) => setCount(value ?? 50)}
+              />
             </div>
             <div>
               <Typography.Text>限时（分钟）</Typography.Text>
               <InputNumber min={5} max={180} value={minutes} onChange={(value) => setMinutes(value ?? 60)} />
             </div>
-            <Button type="primary" size="large" icon={<PlayCircleOutlined />} onClick={startExam} disabled={questions.length === 0}>
+            <Button
+              type="primary"
+              size="large"
+              icon={<PlayCircleOutlined />}
+              onClick={startExam}
+              disabled={answerableQuestions.length === 0}
+            >
               开始考试
             </Button>
           </div>

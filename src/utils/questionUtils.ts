@@ -7,6 +7,7 @@ export function normalizeAnswer(answer: string[]) {
 export function isAnswerCorrect(selected: string[], answer: string[]) {
   const normalizedSelected = normalizeAnswer(selected);
   const normalizedAnswer = normalizeAnswer(answer);
+  if (normalizedAnswer.length === 0) return false;
   return (
     normalizedSelected.length === normalizedAnswer.length &&
     normalizedSelected.every((item, index) => item === normalizedAnswer[index])

@@ -98,7 +98,9 @@ export function BrowsePage() {
                 {question.type === 'single' ? '单选题' : '多选题'}
               </Tag>
               <Tag color="gold">{question.difficulty}</Tag>
-              <Tag color="green">答案 {formatAnswer(question.answer)}</Tag>
+              <Tag color={question.answer.length > 0 ? 'green' : 'orange'}>
+                {question.answer.length > 0 ? `答案 ${formatAnswer(question.answer)}` : '待补答案'}
+              </Tag>
               {question.knowledgePoints.slice(0, 4).map((point) => (
                 <Tag key={point}>{point}</Tag>
               ))}

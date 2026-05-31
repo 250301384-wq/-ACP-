@@ -23,6 +23,7 @@ export function QuestionPanel({
   footer,
   extra,
 }: QuestionPanelProps) {
+  const hasAnswer = question.answer.length > 0;
   const answerSet = new Set(question.answer);
   const selectedSet = new Set(selected);
 
@@ -45,8 +46,8 @@ export function QuestionPanel({
           const optionClass = [
             'option-card',
             isSelected ? 'is-selected' : '',
-            showAnswer && isCorrect ? 'is-correct' : '',
-            showAnswer && isSelected && !isCorrect ? 'is-wrong' : '',
+            showAnswer && hasAnswer && isCorrect ? 'is-correct' : '',
+            showAnswer && hasAnswer && isSelected && !isCorrect ? 'is-wrong' : '',
           ]
             .filter(Boolean)
             .join(' ');
@@ -61,8 +62,10 @@ export function QuestionPanel({
             >
               <span className="option-key">{option.key}</span>
               <span className="option-text">{option.text}</span>
-              {showAnswer && isCorrect ? <CheckCircleFilled className="option-state correct" /> : null}
-              {showAnswer && isSelected && !isCorrect ? <CloseCircleFilled className="option-state wrong" /> : null}
+              {showAnswer && hasAnswer && isCorrect ? <CheckCircleFilled className="option-state correct" /> : null}
+              {showAnswer && hasAnswer && isSelected && !isCorrect ? (
+                <CloseCircleFilled className="option-state wrong" />
+              ) : null}
             </button>
           );
         })}
@@ -71,9 +74,15 @@ export function QuestionPanel({
       {showAnswer ? (
         <div className="answer-block">
           <Space wrap>
-            <Tag icon={<CheckCircleFilled />} color="success">
-              正确答案：{formatAnswer(question.answer)}
-            </Tag>
+            {hasAnswer ? (
+              <Tag icon={<CheckCircleFilled />} color="success">
+                正确答案：{formatAnswer(question.answer)}
+              </Tag>
+            ) : (
+              <Tag icon={<InfoCircleOutlined />} color="warning">
+                待补答案
+              </Tag>
+            )}
             <Tag icon={<InfoCircleOutlined />} color={submitted ? 'processing' : 'default'}>
               已选：{selected.length > 0 ? formatAnswer(selected) : '未作答'}
             </Tag>

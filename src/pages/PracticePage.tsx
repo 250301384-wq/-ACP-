@@ -98,6 +98,11 @@ export function PracticePage() {
 
   const handleSubmit = useCallback(() => {
     if (!currentQuestion) return;
+    if (currentQuestion.answer.length === 0) {
+      setSubmitted(true);
+      message.info('该题暂未提供答案，已标记为待补答案');
+      return;
+    }
     if (selected.length === 0) {
       message.warning('请先选择答案');
       return;
