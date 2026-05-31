@@ -12,7 +12,8 @@ import { WrongBookPage } from './pages/WrongBookPage';
 
 export default function App() {
   const questionState = useQuestions();
-  const basename = import.meta.env.BASE_URL === '/' ? undefined : import.meta.env.BASE_URL.replace(/\/$/, '');
+  const baseUrl = import.meta.env.BASE_URL;
+  const basename = baseUrl.startsWith('/') && baseUrl !== '/' ? baseUrl.replace(/\/$/, '') : undefined;
 
   return (
     <BrowserRouter basename={basename}>
