@@ -59,32 +59,32 @@ export function DashboardPage() {
       </section>
 
       <Row gutter={[16, 16]}>
-        <Col xs={12} md={8} xl={4}>
+        <Col xs={24} sm={12} md={8} xl={4}>
           <Card>
             <Statistic title="总题数" value={total} prefix={<BookOutlined />} />
           </Card>
         </Col>
-        <Col xs={12} md={8} xl={4}>
+        <Col xs={24} sm={12} md={8} xl={4}>
           <Card>
             <Statistic title="已刷题" value={learned} prefix={<CheckCircleOutlined />} />
           </Card>
         </Col>
-        <Col xs={12} md={8} xl={4}>
+        <Col xs={24} sm={12} md={8} xl={4}>
           <Card>
             <Statistic title="正确率" value={accuracy} suffix="%" valueStyle={{ color: '#2f9e44' }} />
           </Card>
         </Col>
-        <Col xs={12} md={8} xl={4}>
+        <Col xs={24} sm={12} md={8} xl={4}>
           <Card>
             <Statistic title="错题数" value={Object.keys(wrongQuestions).length} prefix={<WarningOutlined />} />
           </Card>
         </Col>
-        <Col xs={12} md={8} xl={4}>
+        <Col xs={24} sm={12} md={8} xl={4}>
           <Card>
             <Statistic title="收藏数" value={favorites.length} prefix={<StarOutlined />} />
           </Card>
         </Col>
-        <Col xs={12} md={8} xl={4}>
+        <Col xs={24} sm={12} md={8} xl={4}>
           <Card>
             <Statistic title="今日学习" value={todayRecords.length} suffix={`/ ${settings.dailyGoal}`} />
           </Card>

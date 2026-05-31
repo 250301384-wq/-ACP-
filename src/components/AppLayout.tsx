@@ -36,6 +36,7 @@ export function AppLayout({ questionState }: AppLayoutProps) {
   const navigate = useNavigate();
   const location = useLocation();
   const screens = Grid.useBreakpoint();
+  const showDesktopSider = Boolean(screens.md);
   const [collapsed, setCollapsed] = useState(false);
   const settings = useLearningStore((state) => state.settings);
   const updateSettings = useLearningStore((state) => state.updateSettings);
@@ -49,31 +50,32 @@ export function AppLayout({ questionState }: AppLayoutProps) {
 
   return (
     <Layout className="app-shell">
-      <Sider
-        collapsible
-        collapsed={collapsed || !screens.md}
-        onCollapse={setCollapsed}
-        breakpoint="md"
-        className="app-sider"
-        width={232}
-      >
-        <button className="brand-button" type="button" onClick={() => navigate('/')}>
-          <HeartOutlined className="brand-icon" />
-          {!collapsed && screens.md ? (
-            <span>
-              <strong>ACP 题库</strong>
-              <small>Big Data</small>
-            </span>
-          ) : null}
-        </button>
-        <Menu
-          mode="inline"
-          selectedKeys={[selectedKey]}
-          items={menuItems}
-          onClick={(item) => navigate(item.key)}
-          className="nav-menu"
-        />
-      </Sider>
+      {showDesktopSider ? (
+        <Sider
+          collapsible
+          collapsed={collapsed}
+          onCollapse={setCollapsed}
+          className="app-sider"
+          width={232}
+        >
+          <button className="brand-button" type="button" onClick={() => navigate('/')}>
+            <HeartOutlined className="brand-icon" />
+            {!collapsed ? (
+              <span>
+                <strong>ACP 题库</strong>
+                <small>Big Data</small>
+              </span>
+            ) : null}
+          </button>
+          <Menu
+            mode="inline"
+            selectedKeys={[selectedKey]}
+            items={menuItems}
+            onClick={(item) => navigate(item.key)}
+            className="nav-menu"
+          />
+        </Sider>
+      ) : null}
       <Layout>
         <Header className="app-header">
           <div className="header-title">
@@ -91,6 +93,21 @@ export function AppLayout({ questionState }: AppLayoutProps) {
             onChange={(checked) => updateSettings({ theme: checked ? 'dark' : 'light' })}
           />
         </Header>
+        {!showDesktopSider ? (
+          <nav className="mobile-nav" aria-label="Primary">
+            {menuItems.map((item) => (
+              <button
+                key={item.key}
+                type="button"
+                className={item.key === selectedKey ? 'mobile-nav-item is-active' : 'mobile-nav-item'}
+                onClick={() => navigate(item.key)}
+              >
+                {item.icon}
+                <span>{item.label}</span>
+              </button>
+            ))}
+          </nav>
+        ) : null}
         <Content className="app-content">
           {questionState.error ? (
             <Alert

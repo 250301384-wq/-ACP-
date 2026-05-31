@@ -128,22 +128,22 @@ export function StatsPage() {
   return (
     <div className="page-stack">
       <Row gutter={[16, 16]}>
-        <Col xs={12} md={6}>
+        <Col xs={24} sm={12} md={6}>
           <Card>
             <Statistic title="答题记录" value={answerRecords.length} />
           </Card>
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={24} sm={12} md={6}>
           <Card>
             <Statistic title="总体正确率" value={getAccuracy(answerRecords)} suffix="%" />
           </Card>
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={24} sm={12} md={6}>
           <Card>
             <Statistic title="错题数" value={Object.keys(wrongQuestions).length} />
           </Card>
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={24} sm={12} md={6}>
           <Card>
             <Statistic title="已覆盖知识点" value={knowledgeStats.length} />
           </Card>
